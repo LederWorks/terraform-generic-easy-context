@@ -25,3 +25,4 @@ jobs:
         output-format: markdown document
         git-push: "true"
         git-commit-message: "terraform-docs: autogenerate README.MD"
+        recursive: true
