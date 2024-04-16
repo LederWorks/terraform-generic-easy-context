@@ -1,6 +1,16 @@
 # Change Log
 
-## v0.2.0 [current]
+## v0.3.0 [current]
+FEATURES:
+- Added the Candy Shop
+
+ENHANCEMENTS:
+- XYZ
+
+BUG FIXES:
+- Corrected README.md header
+
+## v0.2.0
 FEATURES:
 - The BIG SWEET update
 

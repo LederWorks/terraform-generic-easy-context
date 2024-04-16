@@ -1,6 +1,6 @@
 <!-- markdownlint-disable-file MD033 MD012 -->
-# terraform-provider-easy-brick-category-purpose
-LederWorks Easy Category Purpose Brick Module
+# terraform-generic-easy-context
+LederWorks Easy Context Module
 
 This module were created by [LederWorks](https://lederworks.com) IaC enthusiasts.
 
