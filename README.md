@@ -34,12 +34,48 @@ The following providers are used by this module:
 
 ### Example 1
 ```hcl
-#Example
+# Module Test
+# module "terratest_context_choco" {
+#   source = "../.."
+
+#   #Common
+#   subsidiary = "choco"
+#   cloud = "azure"
+#   environment = "dev"
+#   region = "eastus"
+
+#   #General
+#   department = "sales"
+#   project = "dark"
+#   tags = {
+#     OwnerContact = "wonka@choco.me"
+#     OwnerOU      = "choco"
+#     Sweetness = "mild"
+#   }
+#   custom_tags = {
+#     HQ = "Brussels"
+#   }
+# }
 ```
 
 ### Example 2
 ```hcl
-#Example
+# Module Test
+```
+
+### Example 3
+```hcl
+# Module Test
+```
+
+### Example 2
+```hcl
+# Module Test
+```
+
+### Example 2
+```hcl
+# Module Test
 ```
 
 ## Resources
@@ -72,7 +108,7 @@ Type:
 object({
     OwnerOU      = string
     OwnerContact = string
-    Criticality  = string
+    Sweetness    = string
   })
 ```
 
@@ -118,31 +154,31 @@ Description: Subsidiary
 
 Type: `string`
 
-Default: `"sub01"`
+Default: `"choco"`
 
 ## Outputs
 
 The following outputs are exported:
 
-### <a name="output_all_sub01"></a> [all\_sub01](#output\_all\_sub01)
+### <a name="output_all_candy"></a> [all\_candy](#output\_all\_candy)
 
-Description: Values for all Subsidiary 01 environments
+Description: Values for all Candy Shop environments
 
-### <a name="output_all_sub02"></a> [all\_sub02](#output\_all\_sub02)
+### <a name="output_all_choco"></a> [all\_choco](#output\_all\_choco)
 
-Description: Values for all Subsidiary 02 environments
+Description: Values for all Chocolate Factory environments
 
-### <a name="output_all_sub03"></a> [all\_sub03](#output\_all\_sub03)
+### <a name="output_all_icecream"></a> [all\_icecream](#output\_all\_icecream)
 
-Description: Values for all Subsidiary 03 environments
+Description: Values for all Icecream Industries environments
 
-### <a name="output_all_sub04"></a> [all\_sub04](#output\_all\_sub04)
+### <a name="output_all_muffin"></a> [all\_muffin](#output\_all\_muffin)
 
-Description: Values for all Subsidiary 04 environments
+Description: Values for all Muffin Manufactures environments
 
-### <a name="output_all_sub05"></a> [all\_sub05](#output\_all\_sub05)
+### <a name="output_all_waffel"></a> [all\_waffel](#output\_all\_waffel)
 
-Description: Values for all Subsidiary 05 environments
+Description: Values for all Waffel Works environments
 
 ### <a name="output_cloud"></a> [cloud](#output\_cloud)
 
