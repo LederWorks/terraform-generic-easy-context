@@ -27,6 +27,10 @@ output:
 output-values:
   enabled: false
 
+sort:
+  enabled: true
+  by: required
+
 settings:
   anchor: true
   default: true
