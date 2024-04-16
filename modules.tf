@@ -12,7 +12,7 @@ module "choco" {
 }
 
 #Cologne Candy Shop
-module "candy" {
+/* module "candy" {
   count       = local.subsidiary == "candy" ? 1 : 0
   source      = "./modules/candy"
   cloud       = local.cloud
@@ -46,3 +46,4 @@ module "waffel" {
   environment = local.environment
   region      = local.region
 }
+ */
