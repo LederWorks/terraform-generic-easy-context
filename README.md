@@ -157,25 +157,9 @@ Default: `"choco"`
 
 The following outputs are exported:
 
-### <a name="output_all_candy"></a> [all\_candy](#output\_all\_candy)
-
-Description: Values for all Candy Shop environments
-
 ### <a name="output_all_choco"></a> [all\_choco](#output\_all\_choco)
 
 Description: Values for all Chocolate Factory environments
-
-### <a name="output_all_icecream"></a> [all\_icecream](#output\_all\_icecream)
-
-Description: Values for all Icecream Industries environments
-
-### <a name="output_all_muffin"></a> [all\_muffin](#output\_all\_muffin)
-
-Description: Values for all Muffin Manufactures environments
-
-### <a name="output_all_waffel"></a> [all\_waffel](#output\_all\_waffel)
-
-Description: Values for all Waffel Works environments
 
 ### <a name="output_cloud"></a> [cloud](#output\_cloud)
 
