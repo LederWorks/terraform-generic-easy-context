@@ -6,17 +6,13 @@ LederWorks Easy Category Purpose Brick Module
 This module were created by [LederWorks](https://lederworks.com) IaC enthusiasts.
 
 ## About This Module
-This module implements the [SECTION](https://lederworks.com/docs/microsoft-azure/bricks/compute/#section) reference Insight.
+This module implements a Context Store for Wonka's Sweet Companies
 
 ## How to Use This Modul
 - Ensure Azure credentials are [in place](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs#authenticating-to-azure) (e.g. `az login` and `az account set --subscription="SUBSCRIPTION_ID"` on your workstation)
 - Owner role or equivalent is required!
 - Ensure pre-requisite resources are created.
 - Create a Terraform configuration that pulls in this module and specifies values for the required variables.
-
-## Disclaimer / Known Issues
-- Disclaimer
-- Known Issues
 
 ## Requirements
 
@@ -30,48 +26,51 @@ No providers.
 
 ## Examples
 
-### Example 1
+### Example for Brussels Chocolate Factory
 ```hcl
 # Module Test
-# module "terratest_context_choco" {
-#   source = "../.."
+module "context_choco_azure_dev" {
+  source = "../.."
 
-#   #Common
-#   subsidiary = "choco"
-#   cloud = "azure"
-#   environment = "dev"
-#   region = "eastus"
+  #Common
+  subsidiary  = "choco"
+  cloud       = "azure"
+  environment = "dev"
+  region      = "northeurope"
 
-#   #General
-#   department = "sales"
-#   project = "dark"
-#   tags = {
-#     OwnerContact = "wonka@choco.me"
-#     OwnerOU      = "choco"
-#     Sweetness = "mild"
-#   }
-#   custom_tags = {
-#     HQ = "Brussels"
-#   }
-# }
+  #General
+  department = "sales"
+  project    = "dark"
+  tags = {
+    OwnerContact = "wonka@choco.me"
+    OwnerOU      = "choco"
+    Sweetness    = "mild"
+  }
+  custom_tags = {
+    HQ = "Brussels"
+  }
+}
+output "context_choco_azure_dev" {
+  value = module.context_choco_azure_dev.context
+}
 ```
 
-### Example 2
-```hcl
-# Module Test
-```
-
-### Example 3
-```hcl
-# Module Test
-```
-
-### Example 2
+### Example for Cologne Candy Shop
 ```hcl
 # Module Test
 ```
 
-### Example 2
+### Example for Istanbul Icecream Industries
+```hcl
+# Module Test
+```
+
+### Example for London Muffin Manufactures
+```hcl
+# Module Test
+```
+
+### Example for Amsterdam Waffel Works
 ```hcl
 # Module Test
 ```
