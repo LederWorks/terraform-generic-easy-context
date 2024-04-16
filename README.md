@@ -53,6 +53,9 @@ module "context_choco_azure_dev" {
 output "context_choco_azure_dev" {
   value = module.context_choco_azure_dev.context
 }
+output "all_choco" {
+  value = module.context_choco_azure_dev.all_choco
+}
 ```
 
 ### Example for Cologne Candy Shop
