@@ -1,10 +1,5 @@
 name: Terratest - terraform-generic-easy-context - 04-muffin
 
-# on:
-#   push:
-#     branches:
-#       - main
-
 on:
   - pull_request
 
@@ -24,12 +19,12 @@ jobs:
     - name: Set up Go
       uses: actions/setup-go@v2
       with:
-        go-version: 1.20
+        go-version: 1.21
 
     - name: Install Terraform
       uses: hashicorp/setup-terraform@v1
       with:
-        terraform_version: 1.5.7
+        terraform_version: 1.8.0
         terraform_wrapper: false
 
     - name: Login to Azure CLI
