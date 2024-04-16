@@ -24,27 +24,27 @@ content: |-
 
   ## Examples
   
-  ### Example 1
+  ### Example for Brussels Chocolate Factory
   ```hcl
   {{ include "examples/01-choco/test.tf" }}
   ```
 
-  ### Example 2
+  ### Example for Cologne Candy Shop
   ```hcl
   {{ include "examples/02-candy/test.tf" }}
   ```
 
-  ### Example 3
+  ### Example for Istanbul Icecream Industries
   ```hcl
   {{ include "examples/03-icecream/test.tf" }}
   ```
 
-  ### Example 2
+  ### Example for London Muffin Manufactures
   ```hcl
   {{ include "examples/04-muffin/test.tf" }}
   ```
 
-  ### Example 2
+  ### Example for Amsterdam Waffel Works
   ```hcl
   {{ include "examples/05-waffel/test.tf" }}
   ```

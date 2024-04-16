@@ -12,7 +12,7 @@ locals {
   azure_global = {
 
     #Proxies
-    http_proxy = "http://proxy.azure.example.com:8083/"
+    http_proxy = "http://proxy.azure.choco.me:8083/"
 
     #Firewalls
     firewall_egress = [

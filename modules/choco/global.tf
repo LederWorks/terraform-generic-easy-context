@@ -1,24 +1,35 @@
+#  $$$$$$\  $$\       $$$$$$\  $$$$$$$\   $$$$$$\  $$\       
+# $$  __$$\ $$ |     $$  __$$\ $$  __$$\ $$  __$$\ $$ |      
+# $$ /  \__|$$ |     $$ /  $$ |$$ |  $$ |$$ /  $$ |$$ |      
+# $$ |$$$$\ $$ |     $$ |  $$ |$$$$$$$\ |$$$$$$$$ |$$ |      
+# $$ |\_$$ |$$ |     $$ |  $$ |$$  __$$\ $$  __$$ |$$ |      
+# $$ |  $$ |$$ |     $$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |      
+# \$$$$$$  |$$$$$$$$\ $$$$$$  |$$$$$$$  |$$ |  $$ |$$$$$$$$\ 
+#  \______/ \________|\______/ \_______/ \__|  \__|\________|
+
 locals {
   global = {
+    site = "https://choco.me/"
+
     azure_devops = {
-      ORG01 = {
-        name = "ORG01"
-        url  = "https://dev.azure.com/ORG01/"
+      CHOCO-01 = {
+        name = "CHOCO-01"
+        url  = "https://dev.azure.com/CHOCO-01/"
       }
-      ORG02 = {
-        name = "ORG01"
-        url  = "https://dev.azure.com/ORG02/"
+      CHOCO-02 = {
+        name = "CHOCO-01"
+        url  = "https://dev.azure.com/CHOCO-02/"
       }
     }
 
     github = {
-      ORG01 = {
-        name = "ORG01"
-        url  = "https://github.com=ORG01/"
+      CHOCO-01 = {
+        name = "CHOCO-01"
+        url  = "https://github.com/CHOCO-01/"
       }
-      ORG02 = {
-        name = "ORG02"
-        url  = "https://github.com=ORG02/"
+      CHOCO-02 = {
+        name = "CHOCO-02"
+        url  = "https://github.com/CHOCO-02/"
       }
     }
   }

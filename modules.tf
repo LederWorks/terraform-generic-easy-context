@@ -2,7 +2,7 @@
 #### Subsidiary Modules ####
 ############################
 
-#Chocolate Factory
+#Brussels Chocolate Factory
 module "choco" {
   count       = local.subsidiary == "choco" ? 1 : 0
   source      = "./modules/choco"
@@ -11,7 +11,7 @@ module "choco" {
   region      = local.region
 }
 
-#Candy Shop
+#Cologne Candy Shop
 module "candy" {
   count       = local.subsidiary == "candy" ? 1 : 0
   source      = "./modules/candy"
@@ -20,7 +20,7 @@ module "candy" {
   region      = local.region
 }
 
-#Icecream Industries
+#Istanbul Icecream Industries
 module "icecream" {
   count       = local.subsidiary == "icecream" ? 1 : 0
   source      = "./modules/icecream"
@@ -29,7 +29,7 @@ module "icecream" {
   region      = local.region
 }
 
-#Muffin Manufactures
+#London Muffin Manufactures
 module "muffin" {
   count       = local.subsidiary == "muffin" ? 1 : 0
   source      = "./modules/muffin"
@@ -38,7 +38,7 @@ module "muffin" {
   region      = local.region
 }
 
-#Waffel Works
+#Amsterdam Waffel Works
 module "waffel" {
   count       = local.subsidiary == "waffel" ? 1 : 0
   source      = "./modules/waffel"
