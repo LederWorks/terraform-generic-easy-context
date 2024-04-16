@@ -1,0 +1,2 @@
+<!-- markdownlint-disable-file MD033 MD012 -->
+Context module for Amsterdam Waffel Works
