@@ -29,6 +29,3 @@ terraform {
     use_azuread_auth     = true
   }
 }
-
-#Client Config Current
-data "azurerm_client_config" "current" {}
