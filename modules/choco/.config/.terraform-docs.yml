@@ -27,9 +27,6 @@ output:
 output-values:
   enabled: false
 
-sort:
-  enabled: true
-
 settings:
   anchor: true
   default: true
