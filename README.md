@@ -26,9 +26,7 @@ The following requirements are needed by this module:
 
 ## Providers
 
-The following providers are used by this module:
-
-- <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm)
+No providers.
 
 ## Examples
 
@@ -80,7 +78,7 @@ The following providers are used by this module:
 
 ## Resources
 
-The following resources are used by this module:
+No resources.
 
 ## Required Inputs
 
