@@ -15,7 +15,7 @@ func TestTerraform(t *testing.T) {
 
 	// Retryable errors in terraform testing.
 	terraformOptions := terraform.WithDefaultRetryableErrors(t, &terraform.Options{
-		TerraformDir: "../examples/01-choco",
+		TerraformDir: "../../examples/01-choco",
 		Upgrade:      true,
 		BackendConfig: map[string]interface{}{
 			"tenant_id":            os.Getenv("ARM_TENANT_ID"),

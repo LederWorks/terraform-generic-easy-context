@@ -66,7 +66,7 @@ variable "tags" {
   type = object({
     OwnerOU      = string
     OwnerContact = string
-    Sweetness  = string
+    Sweetness    = string
   })
   description = "Mandatory resource tags. These tags take precendence over custom_tags in case the same tag is duplicate."
 }

@@ -4,11 +4,11 @@
 locals {
   #Context
   context = {
-    choco = local.subsidiary == "choco" ? module.choco[0].context : null # Brussels Chocolate Factory
-    candy = local.subsidiary == "candy" ? module.candy[0].context : null # Cologne Candy Shop
-    icecream = local.subsidiary == "icecream" ? module.icecream[0].context : null  # Istanbul Icecream Industries
-    muffin = local.subsidiary == "muffin" ? module.muffin[0].context : null  # London Muffin Manufactures
-    waffel = local.subsidiary == "waffel" ? module.candy[0].context : null # Amsterdam Waffel Works
+    choco    = local.subsidiary == "choco" ? module.choco[0].context : null       # Brussels Chocolate Factory
+    candy    = local.subsidiary == "candy" ? module.candy[0].context : null       # Cologne Candy Shop
+    icecream = local.subsidiary == "icecream" ? module.icecream[0].context : null # Istanbul Icecream Industries
+    muffin   = local.subsidiary == "muffin" ? module.muffin[0].context : null     # London Muffin Manufactures
+    waffel   = local.subsidiary == "waffel" ? module.candy[0].context : null      # Amsterdam Waffel Works
   }[local.subsidiary]
 
   #Direct Data Access V2
