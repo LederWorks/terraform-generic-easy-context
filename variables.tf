@@ -10,11 +10,11 @@
 #Subsidiary
 variable "subsidiary" {
   type        = string
-  default     = "sub01"
+  default     = "choco"
   description = "Subsidiary"
   validation {
-    condition     = contains(["sub01", "sub02", "sub03", "sub04", "sub05"], var.subsidiary)
-    error_message = "Only sub01, sub02, sub03, sub04, sub05 are supported as a subsidiary."
+    condition     = contains(["choco", "candy", "icecream", "muffin", "waffel"], var.subsidiary)
+    error_message = "Only choco, candy, icecream, muffin and waffel are supported as a subsidiary."
   }
 }
 
@@ -66,7 +66,7 @@ variable "tags" {
   type = object({
     OwnerOU      = string
     OwnerContact = string
-    Criticality  = string
+    Sweetness    = string
   })
   description = "Mandatory resource tags. These tags take precendence over custom_tags in case the same tag is duplicate."
 }

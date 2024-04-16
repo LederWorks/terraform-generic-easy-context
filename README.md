@@ -6,17 +6,13 @@ LederWorks Easy Category Purpose Brick Module
 This module were created by [LederWorks](https://lederworks.com) IaC enthusiasts.
 
 ## About This Module
-This module implements the [SECTION](https://lederworks.com/docs/microsoft-azure/bricks/compute/#section) reference Insight.
+This module implements a Context Store for Wonka's Sweet Companies
 
 ## How to Use This Modul
 - Ensure Azure credentials are [in place](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs#authenticating-to-azure) (e.g. `az login` and `az account set --subscription="SUBSCRIPTION_ID"` on your workstation)
 - Owner role or equivalent is required!
 - Ensure pre-requisite resources are created.
 - Create a Terraform configuration that pulls in this module and specifies values for the required variables.
-
-## Disclaimer / Known Issues
-- Disclaimer
-- Known Issues
 
 ## Requirements
 
@@ -26,25 +22,65 @@ The following requirements are needed by this module:
 
 ## Providers
 
-The following providers are used by this module:
-
-- <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm)
+No providers.
 
 ## Examples
 
-### Example 1
+### Example for Brussels Chocolate Factory
 ```hcl
-#Example
+# Module Test
+module "context_choco_azure_dev" {
+  source = "../.."
+
+  #Common
+  subsidiary  = "choco"
+  cloud       = "azure"
+  environment = "dev"
+  region      = "northeurope"
+
+  #General
+  department = "sales"
+  project    = "dark"
+  tags = {
+    OwnerContact = "wonka@choco.me"
+    OwnerOU      = "choco"
+    Sweetness    = "mild"
+  }
+  custom_tags = {
+    HQ = "Brussels"
+  }
+}
+output "context_choco_azure_dev" {
+  value = module.context_choco_azure_dev.context
+}
+output "all_choco" {
+  value = module.context_choco_azure_dev.all_choco
+}
 ```
 
-### Example 2
+### Example for Cologne Candy Shop
 ```hcl
-#Example
+# Module Test
+```
+
+### Example for Istanbul Icecream Industries
+```hcl
+# Module Test
+```
+
+### Example for London Muffin Manufactures
+```hcl
+# Module Test
+```
+
+### Example for Amsterdam Waffel Works
+```hcl
+# Module Test
 ```
 
 ## Resources
 
-The following resources are used by this module:
+No resources.
 
 ## Required Inputs
 
@@ -72,7 +108,7 @@ Type:
 object({
     OwnerOU      = string
     OwnerContact = string
-    Criticality  = string
+    Sweetness    = string
   })
 ```
 
@@ -118,31 +154,15 @@ Description: Subsidiary
 
 Type: `string`
 
-Default: `"sub01"`
+Default: `"choco"`
 
 ## Outputs
 
 The following outputs are exported:
 
-### <a name="output_all_sub01"></a> [all\_sub01](#output\_all\_sub01)
+### <a name="output_all_choco"></a> [all\_choco](#output\_all\_choco)
 
-Description: Values for all Subsidiary 01 environments
-
-### <a name="output_all_sub02"></a> [all\_sub02](#output\_all\_sub02)
-
-Description: Values for all Subsidiary 02 environments
-
-### <a name="output_all_sub03"></a> [all\_sub03](#output\_all\_sub03)
-
-Description: Values for all Subsidiary 03 environments
-
-### <a name="output_all_sub04"></a> [all\_sub04](#output\_all\_sub04)
-
-Description: Values for all Subsidiary 04 environments
-
-### <a name="output_all_sub05"></a> [all\_sub05](#output\_all\_sub05)
-
-Description: Values for all Subsidiary 05 environments
+Description: Values for all Chocolate Factory environments
 
 ### <a name="output_cloud"></a> [cloud](#output\_cloud)
 
@@ -188,7 +208,7 @@ Description: Resource Tags
 ```text
 MIT License
 
-Copyright (c) 2023 LederWorks
+Copyright (c) 2024 LederWorks
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
