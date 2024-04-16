@@ -29,7 +29,6 @@ output-values:
 
 sort:
   enabled: true
-  by: required
 
 settings:
   anchor: true
