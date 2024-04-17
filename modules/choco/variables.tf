@@ -32,7 +32,20 @@ variable "region" {
   type        = string
   description = "Cloud Region. Valid values for the region: frankfurt, westeurope, northeurope and germanywestcentral."
   validation {
-    condition     = contains(["frankfurt", "westeurope", "northeurope", "germanywestcentral"], var.region)
-    error_message = "Valid values for the region: frankfurt, westeurope, northeurope and germanywestcentral"
+    condition     = contains([
+      "eastus2", "centralus", "westus2", "northeurope", "westeurope", "germanywestcentral", #Azure
+      "us-east-1", "us-west-1", "us-west-2", "eu-west-1", "eu-central-1", "eu-north-1", #AWS
+      "us-central1", "us-east1", "us-west1", "europe-west1", "europe-west2", "europe-west3", #GCP
+      "us-ashburn-1", "us-phoenix-1 ", "us-sanjose-1 ", "eu-frankfurt-1", "eu-amsterdam-1", "eu-london-1", #OCI
+      "us-central", "us-east", "us-west", "eu-central", "eu-west", "eu-north" #OnPrem
+    ], var.region)
+    error_message = <<EOT
+    Valid values for the regions:
+    azure  = ["eastus2", "centralus", "westus2", "northeurope", "westeurope", "germanywestcentral"]
+    aws    = ["us-east-1", "us-west-1", "us-west-2", "eu-west-1", "eu-central-1", "eu-north-1"]
+    gcp    = ["us-central1", "us-east1", "us-west1", "europe-west1", "europe-west2", "europe-west3"]
+    oci    = ["us-ashburn-1", "us-phoenix-1 ", "us-sanjose-1 ", "eu-frankfurt-1", "eu-amsterdam-1", "eu-london-1"]
+    onprem = ["us-central", "us-east", "us-west", "eu-central", "eu-west", "eu-north"]
+    EOT
   }
 }
