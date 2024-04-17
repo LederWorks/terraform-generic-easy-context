@@ -36,10 +36,10 @@ locals {
   #Context
   context = merge(
     {
-      cloud           = local.cloud,
-      environment     = local.environment,
-      region          = local.region,
-      cloud_regions   = local.cloud_regions,
+      cloud         = local.cloud,
+      environment   = local.environment,
+      region        = local.region,
+      cloud_regions = local.cloud_regions,
     },
     local.global,
     {

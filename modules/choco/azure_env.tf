@@ -9,16 +9,7 @@
 
 locals {
   azure_env = {
-
-    # $$$$$$$\  $$$$$$$$\ $$\    $$\ 
-    # $$  __$$\ $$  _____|$$ |   $$ |
-    # $$ |  $$ |$$ |      $$ |   $$ |
-    # $$ |  $$ |$$$$$\    \$$\  $$  |
-    # $$ |  $$ |$$  __|    \$$\$$  / 
-    # $$ |  $$ |$$ |        \$$$  /  
-    # $$$$$$$  |$$$$$$$$\    \$  /   
-    # \_______/ \________|    \_/    
-
+    #DEV
     dev = {
       log_analytics_workspace_id = local.is_valid_azure_region ? {
         eastus2            = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rgrp-eus2-dev-example-01/providers/Microsoft.OperationalInsights/workspaces/laws-eus2-dev-example-01"
@@ -48,15 +39,7 @@ locals {
       }[local.region] : null
     }
 
-    # $$$$$$$$\  $$$$$$\ $$$$$$$$\ 
-    # \__$$  __|$$  __$$\\__$$  __|
-    #    $$ |   $$ /  \__|  $$ |   
-    #    $$ |   \$$$$$$\    $$ |   
-    #    $$ |    \____$$\   $$ |   
-    #    $$ |   $$\   $$ |  $$ |   
-    #    $$ |   \$$$$$$  |  $$ |   
-    #    \__|    \______/   \__|   
-
+    #TST
     tst = {
       log_analytics_workspace_id = local.is_valid_azure_region ? {
         eastus2            = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rgrp-eus2-tst-example-01/providers/Microsoft.OperationalInsights/workspaces/laws-eus2-tst-example-01"
@@ -86,15 +69,7 @@ locals {
       }[local.region] : null
     }
 
-    # $$$$$$$\  $$$$$$$\  $$$$$$$\  
-    # $$  __$$\ $$  __$$\ $$  __$$\ 
-    # $$ |  $$ |$$ |  $$ |$$ |  $$ |
-    # $$$$$$$  |$$$$$$$  |$$$$$$$  |
-    # $$  ____/ $$  ____/ $$  __$$< 
-    # $$ |      $$ |      $$ |  $$ |
-    # $$ |      $$ |      $$ |  $$ |
-    # \__|      \__|      \__|  \__|
-
+    #PPR
     ppr = {
       log_analytics_workspace_id = local.is_valid_azure_region ? {
         eastus2            = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rgrp-eus2-ppr-example-01/providers/Microsoft.OperationalInsights/workspaces/laws-eus2-ppr-example-01"
@@ -124,15 +99,7 @@ locals {
       }[local.region] : null
     }
 
-    # $$$$$$$\  $$$$$$$\  $$$$$$$\  
-    # $$  __$$\ $$  __$$\ $$  __$$\ 
-    # $$ |  $$ |$$ |  $$ |$$ |  $$ |
-    # $$$$$$$  |$$$$$$$  |$$ |  $$ |
-    # $$  ____/ $$  __$$< $$ |  $$ |
-    # $$ |      $$ |  $$ |$$ |  $$ |
-    # $$ |      $$ |  $$ |$$$$$$$  |
-    # \__|      \__|  \__|\_______/ 
-
+    #PRD
     prd = {
       log_analytics_workspace_id = local.is_valid_azure_region ? {
         eastus2            = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rgrp-eus2-prd-example-01/providers/Microsoft.OperationalInsights/workspaces/laws-eus2-prd-example-01"
