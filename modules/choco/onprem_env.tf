@@ -11,39 +11,47 @@ locals {
   onprem_env = {
     dev = {
       splunk_server = {
-        northeurope        = "northeurope only valid for azure"
-        westeurope         = "northeurope only valid for azure"
-        germanywestcentral = "northeurope only valid for azure"
-        frankfurt          = "splunk-dev-01.choco.me"
-      }[local.region]
+        us-central = "splunk-usc-dev-01.choco.me"
+        us-east    = "splunk-use-dev-01.choco.me"
+        us-west    = "splunk-usw-dev-01.choco.me"
+        eu-central = "splunk-euc-dev-01.choco.me"
+        eu-west    = "splunk-euw-dev-01.choco.me"
+        eu-north   = "splunk-eun-dev-01.choco.me"
+      }[local.regions[local.cloud]]
 
     }
 
     tst = {
       splunk_server = {
-        northeurope        = "northeurope only valid for azure"
-        westeurope         = "northeurope only valid for azure"
-        germanywestcentral = "northeurope only valid for azure"
-        frankfurt          = "splunk-tst-01.choco.me"
-      }[local.region]
+        us-central = "splunk-usc-tst-01.choco.me"
+        us-east    = "splunk-use-tst-01.choco.me"
+        us-west    = "splunk-usw-tst-01.choco.me"
+        eu-central = "splunk-euc-tst-01.choco.me"
+        eu-west    = "splunk-euw-tst-01.choco.me"
+        eu-north   = "splunk-eun-tst-01.choco.me"
+      }[local.regions[local.cloud]]
     }
 
     ppr = {
       splunk_server = {
-        northeurope        = "northeurope only valid for azure"
-        westeurope         = "northeurope only valid for azure"
-        germanywestcentral = "northeurope only valid for azure"
-        frankfurt          = "splunk-ppr-01.choco.me"
-      }[local.region]
+        us-central = "splunk-usc-ppr-01.choco.me"
+        us-east    = "splunk-use-ppr-01.choco.me"
+        us-west    = "splunk-usw-ppr-01.choco.me"
+        eu-central = "splunk-euc-ppr-01.choco.me"
+        eu-west    = "splunk-euw-ppr-01.choco.me"
+        eu-north   = "splunk-eun-ppr-01.choco.me"
+      }[local.regions[local.cloud]]
     }
 
     prd = {
       splunk_server = {
-        northeurope        = "northeurope only valid for azure"
-        westeurope         = "northeurope only valid for azure"
-        germanywestcentral = "northeurope only valid for azure"
-        frankfurt          = "splunk-prd-01.choco.me"
-      }[local.region]
+        us-central = "splunk-usc-prd-01.choco.me"
+        us-east    = "splunk-use-prd-01.choco.me"
+        us-west    = "splunk-usw-prd-01.choco.me"
+        eu-central = "splunk-euc-prd-01.choco.me"
+        eu-west    = "splunk-euw-prd-01.choco.me"
+        eu-north   = "splunk-eun-prd-01.choco.me"
+      }[local.regions[local.cloud]]
     }
   }
 }
