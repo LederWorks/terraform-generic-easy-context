@@ -80,56 +80,56 @@ output "all_choco" {
 
 ### Example for Brussels Chocolate Factory with GCP TST context.
 ```hcl
-module "context_choco_gcp_tst" {
-  source = "../.."
+# module "context_choco_gcp_tst" {
+#   source = "../.."
 
-  #Common
-  cloud       = "gcp"
-  environment = "tst"
-  region      = "westeurope"
+#   #Common
+#   cloud       = "gcp"
+#   environment = "tst"
+#   region      = "westeurope"
 
-  #General
-  department = "marketing"
-  project    = "milk"
-  tags = {
-    OwnerContact = "wonka@choco.me"
-    OwnerOU      = "choco"
-    Sweetness    = "bitter"
-  }
-  custom_tags = {
-    HQ = "Brussels"
-  }
-}
-output "context_choco_gcp_tst" {
-  value = module.context_choco_gcp_tst.context
-}
+#   #General
+#   department = "marketing"
+#   project    = "milk"
+#   tags = {
+#     OwnerContact = "wonka@choco.me"
+#     OwnerOU      = "choco"
+#     Sweetness    = "bitter"
+#   }
+#   custom_tags = {
+#     HQ = "Brussels"
+#   }
+# }
+# output "context_choco_gcp_tst" {
+#   value = module.context_choco_gcp_tst.context
+# }
 ```
 
 ### Example for Brussels Chocolate Factory with AWS PPR context.
 ```hcl
-module "context_choco_aws_ppr" {
-  source = "../.."
+# module "context_choco_aws_ppr" {
+#   source = "../.."
 
-  #Common
-  cloud       = "aws"
-  environment = "ppr"
-  region      = "northeurope"
+#   #Common
+#   cloud       = "aws"
+#   environment = "ppr"
+#   region      = "northeurope"
 
-  #General
-  department = "legal"
-  project    = "cocoa"
-  tags = {
-    OwnerContact = "wonka@choco.me"
-    OwnerOU      = "choco"
-    Sweetness    = "very"
-  }
-  custom_tags = {
-    HQ = "Brussels"
-  }
-}
-output "context_choco_aws_ppr" {
-  value = module.context_choco_aws_ppr.context
-}
+#   #General
+#   department = "legal"
+#   project    = "cocoa"
+#   tags = {
+#     OwnerContact = "wonka@choco.me"
+#     OwnerOU      = "choco"
+#     Sweetness    = "very"
+#   }
+#   custom_tags = {
+#     HQ = "Brussels"
+#   }
+# }
+# output "context_choco_aws_ppr" {
+#   value = module.context_choco_aws_ppr.context
+# }
 ```
 
 The narrative of Willie Wonka's success took a significant turn with the strategic acquisition of the Cologne Candy Shop, a gem in its own right with a rich heritage and an established customer base. Remarkably, the shop had been operating on OCI (Oracle Cloud Infrastructure), presenting a unique integration challenge for Wonka's Sweet Companies. The merger was more than a business transaction; it was a fusion of traditions, innovation, and dreams. Wonka, with his characteristic blend of creativity and business acumen, orchestrated the integration process meticulously, ensuring that the Cologne Candy Shop's legacy was preserved while leveraging the efficiencies of OCI. The unification expanded the company's repertoire, introducing time-honored recipes and new flavors to the Wonka portfolio. The fusion of the two companies was symbolic of the larger confectionery tapestry Wonka was weaving—a world where every treat held a story, every bite was an adventure, and every customer, regardless of location, could savor the full Wonka experience. Through this acquisition, Willie Wonka's journey wasn't just about building a business; it was about crafting a global narrative of sweet indulgence and shared joy.
