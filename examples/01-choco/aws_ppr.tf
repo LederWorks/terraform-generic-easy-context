@@ -2,7 +2,6 @@ module "context_choco_aws_ppr" {
   source = "../.."
 
   #Common
-  subsidiary  = "choco"
   cloud       = "aws"
   environment = "ppr"
   region      = "northeurope"

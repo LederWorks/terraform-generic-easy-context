@@ -21,7 +21,7 @@ variable "subsidiary" {
 #Cloud
 variable "cloud" {
   type        = string
-  description = "Cloud Provider. Possible values are azure, aws, gcp, oci, onprem."
+  description = "Cloud Provider. Possible values are azure, aws, gcp, oci and onprem."
   default     = "azure"
 }
 

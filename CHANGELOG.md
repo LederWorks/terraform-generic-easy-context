@@ -5,7 +5,7 @@ FEATURES:
 - Added the Candy Shop
 
 ENHANCEMENTS:
-- XYZ
+- Added the Tale of the Wonka's Sweet Companies
 
 BUG FIXES:
 - Corrected README.md header

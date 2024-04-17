@@ -2,8 +2,6 @@ module "context_choco_azure_dev" {
   source = "../.."
 
   #Common
-  subsidiary  = "choco"
-  cloud       = "azure"
   environment = "dev"
   region      = "germanywestcentral"
 

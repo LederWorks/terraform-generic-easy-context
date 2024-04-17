@@ -2,7 +2,6 @@ module "context_choco_onprem_prd" {
   source = "../.."
 
   #Common
-  subsidiary  = "choco"
   cloud       = "onprem"
   environment = "prd"
   region      = "frankfurt"

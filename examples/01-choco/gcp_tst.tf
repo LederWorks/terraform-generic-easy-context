@@ -2,7 +2,6 @@ module "context_choco_gcp_tst" {
   source = "../.."
 
   #Common
-  subsidiary  = "choco"
   cloud       = "gcp"
   environment = "tst"
   region      = "westeurope"
