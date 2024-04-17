@@ -23,7 +23,9 @@ variable "environment" {
   description = "Environment - place in the SDLC lifecycle. Valid values for environment: dev, tst, ppr, prd."
   default = null
   validation {
-    condition     = var.environment == null || contains(["dev", "tst", "ppr", "prd"], var.environment)
+    condition     = var.environment == null || anytrue([  
+                      for val in ["dev", "tst", "ppr", "prd"]: val == var.environment 
+                    ])  
     error_message = "Valid values for environment: dev, tst, ppr, prd"
   }
 }
@@ -33,7 +35,9 @@ variable "environment_azure" {
   description = "Azure Environment - place in the SDLC lifecycle. Valid values for environment: dev, tst, ppr, prd."
   default = null
   validation {
-    condition     = var.environment_azure == null || contains(["dev", "tst", "ppr", "prd"], var.environment_azure)
+    condition     = var.environment_azure == null || anytrue([  
+                      for val in ["dev", "tst", "ppr", "prd"]: val == var.environment_azure  
+                    ])
     error_message = "Valid values for environment: dev, tst, ppr, prd"
   }
 }
@@ -43,7 +47,9 @@ variable "environment_aws" {
   description = "AWS Environment - place in the SDLC lifecycle. Valid values for environment: dev, tst, ppr, prd."
   default = null
   validation {
-    condition     = var.environment_aws == null || contains(["dev", "tst", "ppr", "prd"], var.environment_aws)
+    condition     = var.environment_aws == null || anytrue([  
+                      for val in ["dev", "tst", "ppr", "prd"]: val == var.environment_aws
+                    ])
     error_message = "Valid values for environment: dev, tst, ppr, prd"
   }
 }
@@ -53,7 +59,9 @@ variable "environment_gcp" {
   description = "GCP Environment - place in the SDLC lifecycle. Valid values for environment: dev, tst, ppr, prd."
   default = null
   validation {
-    condition     = var.environment_gcp == null || contains(["dev", "tst", "ppr", "prd"], var.environment_gcp)
+    condition     = var.environment_gcp == null || anytrue([  
+                      for val in ["dev", "tst", "ppr", "prd"]: val == var.environment_gcp
+                    ])
     error_message = "Valid values for environment: dev, tst, ppr, prd"
   }
 }
@@ -63,7 +71,9 @@ variable "environment_oci" {
   description = "OCI Environment - place in the SDLC lifecycle. Valid values for environment: dev, tst, ppr, prd."
   default = null
   validation {
-    condition     = var.environment_oci == null || contains(["dev", "tst", "ppr", "prd"], var.environment_oci)
+    condition     = var.environment_oci == null || anytrue([  
+                      for val in ["dev", "tst", "ppr", "prd"]: val == var.environment_oci
+                    ])
     error_message = "Valid values for environment: dev, tst, ppr, prd"
   }
 }
@@ -73,7 +83,9 @@ variable "environment_onprem" {
   description = "OnPrem Environment - place in the SDLC lifecycle. Valid values for environment: frankfurt."
   default = null
   validation {
-    condition     = var.environment_onprem == null || contains(["frankfurt"], var.environment_onprem)
+    condition     = var.environment_onprem == null || anytrue([
+                      for val in ["frankfurt"]: val == var.environment_onprem
+                    ])
     error_message = "Valid values for environment: frankfurt"
   }
 }
