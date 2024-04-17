@@ -22,6 +22,7 @@ locals {
     onprem = ["us-central", "us-east", "us-west", "eu-central", "eu-west", "eu-north"]
   }
   cloud_regions = local.regions[local.cloud]
+  is_valid_region = contains(local.cloud_regions, local.region)
 
   #Context
   context = merge(
