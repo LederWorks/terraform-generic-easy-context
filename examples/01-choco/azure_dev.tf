@@ -1,4 +1,4 @@
-/* module "context_choco_azure_dev" {
+module "context_choco_azure_dev" {
   source = "../.."
 
   #Common
@@ -20,7 +20,3 @@
 output "azure_dev_context" {
   value = module.context_choco_azure_dev.context
 }
-output "all_choco" {
-  value = module.context_choco_azure_dev.all_choco
-}
- */

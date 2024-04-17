@@ -22,9 +22,11 @@ locals {
     onprem = ["us-central", "us-east", "us-west", "eu-central", "eu-west", "eu-north"]
   }
 
+  #Check whether the region is valid for the cloud provider
   cloud_regions   = local.regions[local.cloud]
   is_valid_region = contains(local.cloud_regions, local.region)
 
+  #Check whether specific clouds are valid for the region
   is_valid_azure_region  = contains(local.regions["azure"], local.region)
   is_valid_aws_region    = contains(local.regions["aws"], local.region)
   is_valid_gcp_region    = contains(local.regions["gcp"], local.region)
