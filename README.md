@@ -167,7 +167,7 @@ output "context_candy_oci_int" {
 }
 ```
 
-With his empire expanding and his name synonymous with chocolate, Willie Wonka's ambitious gaze turned to the frosty realm of ice creams. Dreaming of crafting frozen treats that echoed his confectionery's creativity, he sought to launch ice creams under the Wonka brand. However, his plans were soon met with a chilling reception from the EU anti-trust authorities. His intent to acquire Istanbul Icecream Industries—a behemoth that churned out the majority of the world's ice cream—stirred a cauldron of legal battles over monopoly concerns. The authorities feared that such a consolidation would freeze out competition and leave consumers with a vanilla landscape of ice cream choices. Wonka, never one to shy away from a challenge, geared up for a legal labyrinth, his spirit undeterred. He ardently believed that the melding of his chocolate expertise with the ice cream giant would result in a symphony of flavors that could bring even more joy to the world. The outcome of these frigid confrontations remained uncertain, but Wonka's determination to add a scoop of wonder to his sweet empire burned hotter than ever. Finally with the help of his professional legal department and millions of dollars he accomplished this biggest achievement of his life.
+With his empire expanding and his name synonymous with chocolate, Willie Wonka's ambitious gaze turned to the frosty realm of ice creams. Dreaming of crafting frozen treats that echoed his confectionery's creativity, he sought to launch ice creams under the Wonka brand. However, his plans were soon met with a chilling reception from the EU anti-trust authorities. His intent to acquire Istanbul Icecream Industries — a behemoth that churned out the majority of the world's ice cream—stirred a cauldron of legal battles over monopoly concerns. The authorities feared that such a consolidation would freeze out competition and leave consumers with a vanilla landscape of ice cream choices. Wonka, never one to shy away from a challenge, geared up for a legal labyrinth, his spirit undeterred. He ardently believed that the melding of his chocolate expertise with the ice cream giant would result in a symphony of flavors that could bring even more joy to the world. The outcome of these frigid confrontations remained uncertain, but Wonka's determination to add a scoop of wonder to his sweet empire burned hotter than ever. Finally with the help of his professional legal department and millions of dollars he accomplished this biggest achievement of his life.
 
 ### Example for Istanbul Icecream Industries
 ```hcl
@@ -281,6 +281,10 @@ Default: `"choco"`
 ## Outputs
 
 The following outputs are exported:
+
+### <a name="output_all_candy"></a> [all\_candy](#output\_all\_candy)
+
+Description: Values for all Candy Shop environments
 
 ### <a name="output_all_choco"></a> [all\_choco](#output\_all\_choco)
 
