@@ -19,13 +19,14 @@ variable "cloud" {
 
 #Environments
 variable "environment" {
-  type        = map(set(string({
-    azure = ["dev", "tst", "ppr", "prd"]
-    aws = ["dev", "tst", "ppr", "prd"]
-    gcp = ["dev", "tst", "ppr", "prd"]
-    oci = ["dev", "tst", "ppr", "prd"]
-    onprem = ["frankfurt"]
-  })))
+  type = object({
+    azure = optional(string)
+    aws = optional(string)
+    gcp = optional(string)
+    oci = optional(string)
+    onprem = optional(string) 
+  })
+  default = {}
   description = "Environment - place in the SDLC lifecycle. Valid values for environment: dev, tst, ppr, prd."
   # default = null
 
