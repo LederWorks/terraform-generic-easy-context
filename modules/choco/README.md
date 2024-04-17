@@ -12,6 +12,12 @@ Description: Cloud Provider. Possible values are azure, aws, gcp, oci and onprem
 
 Type: `string`
 
+### <a name="input_environment"></a> [environment](#input\_environment)
+
+Description: Environment - place in the SDLC lifecycle. Valid values for environment: dev, tst, ppr, prd.
+
+Type: `string`
+
 ### <a name="input_region"></a> [region](#input\_region)
 
 Description: Cloud Region. Valid values for the region: frankfurt, westeurope, northeurope and germanywestcentral.
@@ -20,55 +26,7 @@ Type: `string`
 
 ## Optional Inputs
 
-The following input variables are optional (have default values):
-
-### <a name="input_environment"></a> [environment](#input\_environment)
-
-Description: Environment - place in the SDLC lifecycle. Valid values for environment: dev, tst, ppr, prd.
-
-Type: `string`
-
-Default: `null`
-
-### <a name="input_environment_aws"></a> [environment\_aws](#input\_environment\_aws)
-
-Description: AWS Environment - place in the SDLC lifecycle. Valid values for environment: dev, tst, ppr, prd.
-
-Type: `string`
-
-Default: `null`
-
-### <a name="input_environment_azure"></a> [environment\_azure](#input\_environment\_azure)
-
-Description: Azure Environment - place in the SDLC lifecycle. Valid values for environment: dev, tst, ppr, prd.
-
-Type: `string`
-
-Default: `null`
-
-### <a name="input_environment_gcp"></a> [environment\_gcp](#input\_environment\_gcp)
-
-Description: GCP Environment - place in the SDLC lifecycle. Valid values for environment: dev, tst, ppr, prd.
-
-Type: `string`
-
-Default: `null`
-
-### <a name="input_environment_oci"></a> [environment\_oci](#input\_environment\_oci)
-
-Description: OCI Environment - place in the SDLC lifecycle. Valid values for environment: dev, tst, ppr, prd.
-
-Type: `string`
-
-Default: `null`
-
-### <a name="input_environment_onprem"></a> [environment\_onprem](#input\_environment\_onprem)
-
-Description: OnPrem Environment - place in the SDLC lifecycle. Valid values for environment: frankfurt.
-
-Type: `string`
-
-Default: `null`
+No optional inputs.
 
 ## Outputs
 
@@ -84,7 +42,7 @@ Description: Direct Data Access
 
 ### <a name="output_context"></a> [context](#output\_context)
 
-Description: context
+Description: Context
 
 ### <a name="output_gcp"></a> [gcp](#output\_gcp)
 

@@ -28,7 +28,7 @@ module "context_choco_onprem_prd" {
   #Common
   cloud       = "onprem"
   environment = "prd"
-  region      = "frankfurt"
+  region      = "eu-central"
 
   #General
   department = "technology"
@@ -42,7 +42,7 @@ module "context_choco_onprem_prd" {
     HQ = "Brussels"
   }
 }
-output "context_choco_onprem_prd" {
+output "onprem_prd_context" {
   value = module.context_choco_onprem_prd.context
 }
 ```
@@ -70,11 +70,8 @@ module "context_choco_azure_dev" {
     HQ = "Brussels"
   }
 }
-output "context_choco_azure_dev" {
+output "azure_dev_context" {
   value = module.context_choco_azure_dev.context
-}
-output "all_choco" {
-  value = module.context_choco_azure_dev.all_choco
 }
 ```
 
@@ -100,36 +97,36 @@ module "context_choco_gcp_tst" {
     HQ = "Brussels"
   }
 }
-output "context_choco_gcp_tst" {
+output "gcp_tst_context" {
   value = module.context_choco_gcp_tst.context
 }
 ```
 
 ### Example for Brussels Chocolate Factory with AWS PPR context.
 ```hcl
-module "context_choco_aws_ppr" {
-  source = "../.."
+# module "context_choco_aws_ppr" {
+#   source = "../.."
 
-  #Common
-  cloud       = "aws"
-  environment = "ppr"
-  region      = "northeurope"
+#   #Common
+#   cloud       = "aws"
+#   environment = "ppr"
+#   region      = "northeurope"
 
-  #General
-  department = "legal"
-  project    = "cocoa"
-  tags = {
-    OwnerContact = "wonka@choco.me"
-    OwnerOU      = "choco"
-    Sweetness    = "very"
-  }
-  custom_tags = {
-    HQ = "Brussels"
-  }
-}
-output "context_choco_aws_ppr" {
-  value = module.context_choco_aws_ppr.context
-}
+#   #General
+#   department = "legal"
+#   project    = "cocoa"
+#   tags = {
+#     OwnerContact = "wonka@choco.me"
+#     OwnerOU      = "choco"
+#     Sweetness    = "very"
+#   }
+#   custom_tags = {
+#     HQ = "Brussels"
+#   }
+# }
+# output "context_choco_aws_ppr" {
+#   value = module.context_choco_aws_ppr.context
+# }
 ```
 
 The narrative of Willie Wonka's success took a significant turn with the strategic acquisition of the Cologne Candy Shop, a gem in its own right with a rich heritage and an established customer base. Remarkably, the shop had been operating on OCI (Oracle Cloud Infrastructure), presenting a unique integration challenge for Wonka's Sweet Companies. The merger was more than a business transaction; it was a fusion of traditions, innovation, and dreams. Wonka, with his characteristic blend of creativity and business acumen, orchestrated the integration process meticulously, ensuring that the Cologne Candy Shop's legacy was preserved while leveraging the efficiencies of OCI. The unification expanded the company's repertoire, introducing time-honored recipes and new flavors to the Wonka portfolio. The fusion of the two companies was symbolic of the larger confectionery tapestry Wonka was weaving—a world where every treat held a story, every bite was an adventure, and every customer, regardless of location, could savor the full Wonka experience. Through this acquisition, Willie Wonka's journey wasn't just about building a business; it was about crafting a global narrative of sweet indulgence and shared joy.
@@ -203,6 +200,12 @@ No resources.
 
 The following input variables are required:
 
+### <a name="input_environment"></a> [environment](#input\_environment)
+
+Description: Environment - place in the SDLC lifecycle
+
+Type: `string`
+
 ### <a name="input_region"></a> [region](#input\_region)
 
 Description: Cloud Region
@@ -250,54 +253,6 @@ Description: Department
 Type: `string`
 
 Default: `""`
-
-### <a name="input_environment"></a> [environment](#input\_environment)
-
-Description: Environment - place in the SDLC lifecycle
-
-Type: `string`
-
-Default: `null`
-
-### <a name="input_environment_aws"></a> [environment\_aws](#input\_environment\_aws)
-
-Description: AWS Environment - place in the SDLC lifecycle
-
-Type: `string`
-
-Default: `null`
-
-### <a name="input_environment_azure"></a> [environment\_azure](#input\_environment\_azure)
-
-Description: Azure Environment - place in the SDLC lifecycle
-
-Type: `string`
-
-Default: `null`
-
-### <a name="input_environment_gcp"></a> [environment\_gcp](#input\_environment\_gcp)
-
-Description: GCP Environment - place in the SDLC lifecycle
-
-Type: `string`
-
-Default: `null`
-
-### <a name="input_environment_oci"></a> [environment\_oci](#input\_environment\_oci)
-
-Description: OCI Environment - place in the SDLC lifecycle
-
-Type: `string`
-
-Default: `null`
-
-### <a name="input_environment_onprem"></a> [environment\_onprem](#input\_environment\_onprem)
-
-Description: OnPrem Environment - place in the SDLC lifecycle
-
-Type: `string`
-
-Default: `null`
 
 ### <a name="input_project"></a> [project](#input\_project)
 

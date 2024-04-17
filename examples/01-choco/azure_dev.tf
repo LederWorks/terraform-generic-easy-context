@@ -17,9 +17,6 @@ module "context_choco_azure_dev" {
     HQ = "Brussels"
   }
 }
-output "context_choco_azure_dev" {
+output "azure_dev_context" {
   value = module.context_choco_azure_dev.context
-}
-output "all_choco" {
-  value = module.context_choco_azure_dev.all_choco
 }

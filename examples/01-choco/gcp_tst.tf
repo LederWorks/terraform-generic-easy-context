@@ -18,6 +18,6 @@ module "context_choco_gcp_tst" {
     HQ = "Brussels"
   }
 }
-output "context_choco_gcp_tst" {
+output "gcp_tst_context" {
   value = module.context_choco_gcp_tst.context
 }

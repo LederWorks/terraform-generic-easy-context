@@ -9,46 +9,38 @@
 
 locals {
   #Input Parameters
-  cloud = var.cloud
-  #Environments
-  environment        = var.environment
-  environment_azure  = var.environment_azure
-  environment_aws    = var.environment_aws
-  environment_gcp    = var.environment_gcp
-  environment_oci    = var.environment_oci
-  environment_onprem = var.environment_onprem
-  region             = var.region
+  cloud       = var.cloud
+  environment = var.environment
+  region      = var.region
+
+  #Regions
+  regions = {
+    azure  = ["eastus2", "centralus", "westus2", "northeurope", "westeurope", "germanywestcentral"]
+    aws    = ["us-east-1", "us-west-1", "us-west-2", "eu-west-1", "eu-central-1", "eu-north-1"]
+    gcp    = ["us-central1", "us-east1", "us-west1", "europe-west1", "europe-west2", "europe-west3"]
+    oci    = ["us-ashburn-1", "us-phoenix-1 ", "us-sanjose-1 ", "eu-frankfurt-1", "eu-amsterdam-1", "eu-london-1"]
+    onprem = ["us-central", "us-east", "us-west", "eu-central", "eu-west", "eu-north"]
+  }
+
+  #Check whether the region is valid for the cloud provider
+  cloud_regions   = local.regions[local.cloud]
+  is_valid_region = contains(local.cloud_regions, local.region)
+
+  #Check whether specific clouds are valid for the region
+  is_valid_azure_region  = contains(local.regions["azure"], local.region)
+  is_valid_aws_region    = contains(local.regions["aws"], local.region)
+  is_valid_gcp_region    = contains(local.regions["gcp"], local.region)
+  is_valid_oci_region    = contains(local.regions["oci"], local.region)
+  is_valid_onprem_region = contains(local.regions["onprem"], local.region)
 
   #Context
   context = merge(
     {
-      cloud              = local.cloud,
-      # environment        = local.environment,
-      # environment_azure  = local.environment_azure,
-      # environment_aws    = local.environment_aws,
-      # environment_gcp    = local.environment_gcp,
-      # environment_oci    = local.environment_oci,
-      # environment_onprem = local.environment_onprem,
-      region             = local.region,
+      cloud         = local.cloud,
+      environment   = local.environment,
+      region        = local.region,
+      cloud_regions = local.cloud_regions,
     },
-    local.environment != null ? {
-      environment = local.environment
-    } : {},
-    local.environment_azure != null ? {
-      environment_azure = local.environment_azure
-    } : {},
-    local.environment_aws != null ? {
-      environment_aws = local.environment_aws
-    } : {},
-    local.environment_gcp != null ? {
-      environment_gcp = local.environment_gcp
-    } : {},
-    local.environment_oci != null ? {
-      environment_oci = local.environment_oci
-    } : {},
-    local.environment_onprem != null ? {
-      environment_onprem = local.environment_onprem
-    } : {},
     local.global,
     {
       azure = merge(
@@ -69,7 +61,7 @@ locals {
       )
       onprem = merge(
         local.onprem_global,
-        local.onprem_env[local.environment_onprem]
+        local.onprem_env[local.environment]
       )
     }[local.cloud]
   )

@@ -4,7 +4,7 @@ module "context_choco_onprem_prd" {
   #Common
   cloud       = "onprem"
   environment = "prd"
-  region      = "frankfurt"
+  region      = "eu-central"
 
   #General
   department = "technology"
@@ -18,6 +18,6 @@ module "context_choco_onprem_prd" {
     HQ = "Brussels"
   }
 }
-output "context_choco_onprem_prd" {
+output "onprem_prd_context" {
   value = module.context_choco_onprem_prd.context
 }
