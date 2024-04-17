@@ -51,7 +51,7 @@ As the demand for Wonka's confections soared, so too did the need for a robust, 
 
 ### Example for Brussels Chocolate Factory with Azure DEV context.
 ```hcl
-/* module "context_choco_azure_dev" {
+module "context_choco_azure_dev" {
   source = "../.."
 
   #Common
@@ -73,10 +73,6 @@ As the demand for Wonka's confections soared, so too did the need for a robust, 
 output "azure_dev_context" {
   value = module.context_choco_azure_dev.context
 }
-output "all_choco" {
-  value = module.context_choco_azure_dev.all_choco
-}
- */
 ```
 
 ### Example for Brussels Chocolate Factory with GCP TST context.
