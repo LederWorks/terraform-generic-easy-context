@@ -10,7 +10,7 @@
 locals {
   onprem_env = {
     dev = {
-      splunk_server = local.is_valid_region ? {
+      splunk_server = local.is_valid_onprem_region ? {
         us-central = "splunk-usc-dev-01.choco.me"
         us-east    = "splunk-use-dev-01.choco.me"
         us-west    = "splunk-usw-dev-01.choco.me"
@@ -21,7 +21,7 @@ locals {
     }
 
     tst = {
-      splunk_server = local.is_valid_region ? {
+      splunk_server = local.is_valid_onprem_region ? {
         us-central = "splunk-usc-tst-01.choco.me"
         us-east    = "splunk-use-tst-01.choco.me"
         us-west    = "splunk-usw-tst-01.choco.me"
@@ -32,7 +32,7 @@ locals {
     }
 
     ppr = {
-      splunk_server = local.is_valid_region ? {
+      splunk_server = local.is_valid_onprem_region ? {
         us-central = "splunk-usc-ppr-01.choco.me"
         us-east    = "splunk-use-ppr-01.choco.me"
         us-west    = "splunk-usw-ppr-01.choco.me"
@@ -43,7 +43,7 @@ locals {
     }
 
     prd = {
-      splunk_server = local.is_valid_region ? {
+      splunk_server = local.is_valid_onprem_region ? {
         us-central = "splunk-usc-prd-01.choco.me"
         us-east    = "splunk-use-prd-01.choco.me"
         us-west    = "splunk-usw-prd-01.choco.me"
