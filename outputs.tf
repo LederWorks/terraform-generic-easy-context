@@ -9,22 +9,22 @@ output "all_choco" {
   description = "Values for all Chocolate Factory environments"
   value       = local.all_choco
 }
-/* output "all_candy" {
+output "all_candy" {
   description = "Values for all Candy Shop environments"
   value       = local.all_candy
 }
-output "all_icecream" {
-  description = "Values for all Icecream Industries environments"
-  value       = local.all_icecream
-}
-output "all_muffin" {
-  description = "Values for all Muffin Manufactures environments"
-  value       = local.all_muffin
-}
-output "all_waffel" {
-  description = "Values for all Waffel Works environments"
-  value       = local.all_waffel
-} */
+# output "all_icecream" {
+#   description = "Values for all Icecream Industries environments"
+#   value       = local.all_icecream
+# }
+# output "all_muffin" {
+#   description = "Values for all Muffin Manufactures environments"
+#   value       = local.all_muffin
+# }
+# output "all_waffel" {
+#   description = "Values for all Waffel Works environments"
+#   value       = local.all_waffel
+# }
 
 #Common
 output "subsidiary" {

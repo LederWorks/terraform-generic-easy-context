@@ -30,9 +30,9 @@ variable "environment" {
 #Region
 variable "region" {
   type        = string
-  description = "Cloud Region. Valid values for the region: westeurope, northeurope, germanywestcentral."
+  description = "Cloud Region. Valid values for the region: frankfurt, westeurope, northeurope and germanywestcentral."
   validation {
-    condition     = contains(["westeurope", "northeurope", "germanywestcentral"], var.region)
-    error_message = "Valid values for the region: westeurope, northeurope, germanywestcentral"
+    condition     = contains(["frankfurt", "westeurope", "northeurope", "germanywestcentral"], var.region)
+    error_message = "Valid values for the region: frankfurt, westeurope, northeurope and germanywestcentral"
   }
 }

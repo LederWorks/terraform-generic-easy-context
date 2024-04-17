@@ -8,7 +8,7 @@ The following input variables are required:
 
 ### <a name="input_cloud"></a> [cloud](#input\_cloud)
 
-Description: Cloud Provider. Possible values are azure, aws, gcp, onprem.
+Description: Cloud Provider. Possible values are azure and oci.
 
 Type: `string`
 
@@ -30,5 +30,17 @@ No optional inputs.
 
 ## Outputs
 
-No outputs.
+The following outputs are exported:
+
+### <a name="output_azure"></a> [azure](#output\_azure)
+
+Description: Direct Data Access
+
+### <a name="output_context"></a> [context](#output\_context)
+
+Description: context
+
+### <a name="output_oci"></a> [oci](#output\_oci)
+
+Description: n/a
 <!-- END_TF_DOCS -->

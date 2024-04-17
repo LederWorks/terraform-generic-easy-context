@@ -9,27 +9,27 @@
 
 locals {
   global = {
-    site = "https://choco.me/"
+    site = "https://candy.me/"
 
     azure_devops = {
-      CHOCO-01 = {
-        name = "CHOCO-01"
-        url  = "https://dev.azure.com/CHOCO-01/"
+      CANDY-01 = {
+        name = "CANDY-01"
+        url  = "https://dev.azure.com/CANDY-01/"
       }
-      CHOCO-02 = {
-        name = "CHOCO-02"
-        url  = "https://dev.azure.com/CHOCO-02/"
+      CANDY-02 = {
+        name = "CANDY-02"
+        url  = "https://dev.azure.com/CANDY-02/"
       }
     }
 
     github = {
-      CHOCO-01 = {
-        name = "CHOCO-01"
-        url  = "https://github.com/CHOCO-01/"
+      CANDY-01 = {
+        name = "CANDY-01"
+        url  = "https://github.com/CANDY-01/"
       }
-      CHOCO-02 = {
-        name = "CHOCO-02"
-        url  = "https://github.com/CHOCO-02/"
+      CANDY-02 = {
+        name = "CANDY-02"
+        url  = "https://github.com/CANDY-02/"
       }
     }
   }
