@@ -5,32 +5,53 @@ LederWorks Easy Context Module
 
 This module were created by [LederWorks](https://lederworks.com) IaC enthusiasts.
 
-## About This Module
-This module implements a Context Store for Wonka's Sweet Companies
-
-Long before he became a legend in the confectionery world, Willie Wonka's tale began in the humblest of settings—an orphanage nestled in the heart of an old European village. The young Wonka, with no family to speak of, found solace in the kitchen, where the aroma of baking sweets filled the air and ignited his passion for chocolate. An elderly cook, fond of the bright-eyed boy, took him under her wing, revealing the secrets of tempering chocolate and crafting confections that could make one's heart sing. Night after night, young Wonka experimented with cocoa beans and sugar, his hands coated in the makings of what would become his future empire. His creations quickly became the orphanage's most coveted treasures, with whispers of his talent traveling beyond the worn-out gates. It wasn't just the sweetness of his chocolate that captivated those who sampled it; it was the sprinkling of love and wonder that seemed to dance in every bite. With each truffle and bar, Willie Wonka wasn't just learning to make chocolate—he was learning to make magic.
-
 ## How to Use This Module
 - Ensure Azure credentials are [in place](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs#authenticating-to-azure) (e.g. `az login` and `az account set --subscription="SUBSCRIPTION_ID"` on your workstation)
 - Owner role or equivalent is required!
 - Ensure pre-requisite resources are created.
 - Create a Terraform configuration that pulls in this module and specifies values for the required variables.
 
-## Requirements
+## About This Module
+This module implements a Context Store for Wonka's Sweet Companies
 
-The following requirements are needed by this module:
-
-- <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) (>=1.3.6)
-
-## Providers
-
-No providers.
+Long before he became a legend in the confectionery world, Willie Wonka's tale began in the humblest of settings—an orphanage nestled in the heart of an old European village. The young Wonka, with no family to speak of, found solace in the kitchen, where the aroma of baking sweets filled the air and ignited his passion for chocolate. An elderly cook, fond of the bright-eyed boy, took him under her wing, revealing the secrets of tempering chocolate and crafting confections that could make one's heart sing. Night after night, young Wonka experimented with cocoa beans and sugar, his hands coated in the makings of what would become his future empire. His creations quickly became the orphanage's most coveted treasures, with whispers of his talent traveling beyond the worn-out gates. It wasn't just the sweetness of his chocolate that captivated those who sampled it; it was the sprinkling of love and wonder that seemed to dance in every bite. With each truffle and bar, Willie Wonka wasn't just learning to make chocolate—he was learning to make magic.
 
 ## Examples
 
-### Example for Brussels Chocolate Factory
+Years later, that same magic paved the way for Willie Wonka to establish the Brussels Chocolate Factory, a marvel of innovation and delight that quickly set the gold standard in the industry. Wonka's approach to chocolate-making was nothing short of revolutionary, blending age-old techniques with whimsical invention. His relentless pursuit of perfection and flair for the fantastical led to an expansion that soon saw Wonka's Sweet Companies planting roots on every habitable continent. He understood early on the importance of technology in sustaining his growing empire and invested heavily in on-premise data centers to support his ERP (Enterprise Resource Planning) and CRM (Customer Relationship Management) systems. This infrastructure became the digital backbone of the factories, ensuring that Wonka's delectable treats were produced with the utmost efficiency and never failed to reach the hands of eager consumers around the globe. His factories were not just places of work; they were shrines to the craft of confectionery, where the scent of chocolate wafted through the air and innovation never ceased.
+
+### Example for Brussels Chocolate Factory with Onpremise PRD context.
 ```hcl
-# Module Test
+module "context_choco_onprem_prd" {
+  source = "../.."
+
+  #Common
+  subsidiary  = "choco"
+  cloud       = "onprem"
+  environment = "prd"
+  region      = "frankfurt"
+
+  #General
+  department = "technology"
+  project    = "erp"
+  tags = {
+    OwnerContact = "wonka@choco.me"
+    OwnerOU      = "choco"
+    Sweetness    = "sparkling"
+  }
+  custom_tags = {
+    HQ = "Brussels"
+  }
+}
+output "context_choco_onprem_prd" {
+  value = module.context_choco_onprem_prd.context
+}
+```
+
+As the demand for Wonka's confections soared, so too did the need for a robust, scalable, and more secure IT infrastructure. The on-premise data centers, once the heart of Wonka's technological endeavors, began to buckle under the strain of global operations. It was the dawn of the cloud computing era, and Willie Wonka, ever the visionary, saw the boundless potential it offered. The firm embarked on a bold transition, shifting critical systems to the public cloud infrastructures of Azure, AWS, and GCP. This move to the cloud allowed for unparalleled agility and scale, ensuring that the magical world of Wonka's chocolate could reach farther and enchant more people than ever before. Data flowed like rivers of liquid chocolate, seamlessly connecting every corner of the Wonka empire. The transition was not without its challenges, but under Wonka's unwavering guidance, the company emerged more resilient and connected, poised to conquer new markets and delight customers with every sugary creation.
+
+### Example for Brussels Chocolate Factory with Azure DEV context.
+```hcl
 module "context_choco_azure_dev" {
   source = "../.."
 
@@ -38,7 +59,7 @@ module "context_choco_azure_dev" {
   subsidiary  = "choco"
   cloud       = "azure"
   environment = "dev"
-  region      = "northeurope"
+  region      = "germanywestcentral"
 
   #General
   department = "sales"
@@ -60,9 +81,90 @@ output "all_choco" {
 }
 ```
 
-### Example for Cologne Candy Shop
+### Example for Brussels Chocolate Factory with GCP TST context.
 ```hcl
-# Module Test
+module "context_choco_gcp_tst" {
+  source = "../.."
+
+  #Common
+  subsidiary  = "choco"
+  cloud       = "gcp"
+  environment = "tst"
+  region      = "westeurope"
+
+  #General
+  department = "marketing"
+  project    = "milk"
+  tags = {
+    OwnerContact = "wonka@choco.me"
+    OwnerOU      = "choco"
+    Sweetness    = "bitter"
+  }
+  custom_tags = {
+    HQ = "Brussels"
+  }
+}
+output "context_choco_gcp_tst" {
+  value = module.context_choco_gcp_tst.context
+}
+```
+
+### Example for Brussels Chocolate Factory with AWS PPR context.
+```hcl
+module "context_choco_aws_ppr" {
+  source = "../.."
+
+  #Common
+  subsidiary  = "choco"
+  cloud       = "aws"
+  environment = "ppr"
+  region      = "northeurope"
+
+  #General
+  department = "legal"
+  project    = "cocoa"
+  tags = {
+    OwnerContact = "wonka@choco.me"
+    OwnerOU      = "choco"
+    Sweetness    = "very"
+  }
+  custom_tags = {
+    HQ = "Brussels"
+  }
+}
+output "context_choco_aws_ppr" {
+  value = module.context_choco_aws_ppr.context
+}
+```
+
+The narrative of Willie Wonka's success took a significant turn with the strategic acquisition of the Cologne Candy Shop, a gem in its own right with a rich heritage and an established customer base. Remarkably, the shop had been operating on OCI (Oracle Cloud Infrastructure), presenting a unique integration challenge for Wonka's Sweet Companies. The merger was more than a business transaction; it was a fusion of traditions, innovation, and dreams. Wonka, with his characteristic blend of creativity and business acumen, orchestrated the integration process meticulously, ensuring that the Cologne Candy Shop's legacy was preserved while leveraging the efficiencies of OCI. The unification expanded the company's repertoire, introducing time-honored recipes and new flavors to the Wonka portfolio. The fusion of the two companies was symbolic of the larger confectionery tapestry Wonka was weaving—a world where every treat held a story, every bite was an adventure, and every customer, regardless of location, could savor the full Wonka experience. Through this acquisition, Willie Wonka's journey wasn't just about building a business; it was about crafting a global narrative of sweet indulgence and shared joy.
+
+### Example for Cologne Candy Shop OCI DEV context.
+```hcl
+/* module "context_candy_oci_dev" {
+  source = "../.."
+
+  #Common
+  subsidiary  = "candy"
+  cloud       = "oci"
+  environment = "dev"
+  region      = "frankfurt"
+
+  #General
+  department = "logistics"
+  project    = "trucks"
+  tags = {
+    OwnerContact = "wonka@candy.me"
+    OwnerOU      = "candy"
+    Sweetness    = "very"
+  }
+  custom_tags = {
+    HQ = "Cologne"
+  }
+}
+output "context_choco_aws_ppr" {
+  value = module.context_choco_aws_ppr.context
+} */
 ```
 
 ### Example for Istanbul Icecream Industries
@@ -79,6 +181,16 @@ output "all_choco" {
 ```hcl
 # Module Test
 ```
+
+## Requirements
+
+The following requirements are needed by this module:
+
+- <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) (>=1.3.6)
+
+## Providers
+
+No providers.
 
 ## Resources
 

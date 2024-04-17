@@ -20,7 +20,7 @@ Type: `string`
 
 ### <a name="input_region"></a> [region](#input\_region)
 
-Description: Cloud Region. Valid values for the region: westeurope, northeurope, germanywestcentral.
+Description: Cloud Region. Valid values for the region: frankfurt, westeurope, northeurope and germanywestcentral.
 
 Type: `string`
 
