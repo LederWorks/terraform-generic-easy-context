@@ -1,4 +1,3 @@
-# Module Test
 module "context_choco_azure_dev" {
   source = "../.."
 
@@ -6,7 +5,7 @@ module "context_choco_azure_dev" {
   subsidiary  = "choco"
   cloud       = "azure"
   environment = "dev"
-  region      = "northeurope"
+  region      = "germanywestcentral"
 
   #General
   department = "sales"

@@ -18,20 +18,37 @@ sections:
 content: |-
   {{ .Header }}
 
-  {{ .Requirements }}
-
-  {{ .Providers }}
-
   ## Examples
-  
-  ### Example for Brussels Chocolate Factory
+
+  Years later, that same magic paved the way for Willie Wonka to establish the Brussels Chocolate Factory, a marvel of innovation and delight that quickly set the gold standard in the industry. Wonka's approach to chocolate-making was nothing short of revolutionary, blending age-old techniques with whimsical invention. His relentless pursuit of perfection and flair for the fantastical led to an expansion that soon saw Wonka's Sweet Companies planting roots on every habitable continent. He understood early on the importance of technology in sustaining his growing empire and invested heavily in on-premise data centers to support his ERP (Enterprise Resource Planning) and CRM (Customer Relationship Management) systems. This infrastructure became the digital backbone of the factories, ensuring that Wonka's delectable treats were produced with the utmost efficiency and never failed to reach the hands of eager consumers around the globe. His factories were not just places of work; they were shrines to the craft of confectionery, where the scent of chocolate wafted through the air and innovation never ceased.
+
+  ### Example for Brussels Chocolate Factory with Onpremise PRD context.
   ```hcl
-  {{ include "examples/01-choco/test.tf" }}
+  {{ include "examples/01-choco/onprem_prd.tf" }}
   ```
 
-  ### Example for Cologne Candy Shop
+  As the demand for Wonka's confections soared, so too did the need for a robust, scalable, and more secure IT infrastructure. The on-premise data centers, once the heart of Wonka's technological endeavors, began to buckle under the strain of global operations. It was the dawn of the cloud computing era, and Willie Wonka, ever the visionary, saw the boundless potential it offered. The firm embarked on a bold transition, shifting critical systems to the public cloud infrastructures of Azure, AWS, and GCP. This move to the cloud allowed for unparalleled agility and scale, ensuring that the magical world of Wonka's chocolate could reach farther and enchant more people than ever before. Data flowed like rivers of liquid chocolate, seamlessly connecting every corner of the Wonka empire. The transition was not without its challenges, but under Wonka's unwavering guidance, the company emerged more resilient and connected, poised to conquer new markets and delight customers with every sugary creation.
+
+  ### Example for Brussels Chocolate Factory with Azure DEV context.
   ```hcl
-  {{ include "examples/02-candy/test.tf" }}
+  {{ include "examples/01-choco/azure_dev.tf" }}
+  ```
+
+  ### Example for Brussels Chocolate Factory with GCP TST context.
+  ```hcl
+  {{ include "examples/01-choco/gcp_tst.tf" }}
+  ```
+
+  ### Example for Brussels Chocolate Factory with AWS PPR context.
+  ```hcl
+  {{ include "examples/01-choco/aws_ppr.tf" }}
+  ```
+
+  The narrative of Willie Wonka's success took a significant turn with the strategic acquisition of the Cologne Candy Shop, a gem in its own right with a rich heritage and an established customer base. Remarkably, the shop had been operating on OCI (Oracle Cloud Infrastructure), presenting a unique integration challenge for Wonka's Sweet Companies. The merger was more than a business transaction; it was a fusion of traditions, innovation, and dreams. Wonka, with his characteristic blend of creativity and business acumen, orchestrated the integration process meticulously, ensuring that the Cologne Candy Shop's legacy was preserved while leveraging the efficiencies of OCI. The unification expanded the company's repertoire, introducing time-honored recipes and new flavors to the Wonka portfolio. The fusion of the two companies was symbolic of the larger confectionery tapestry Wonka was weaving—a world where every treat held a story, every bite was an adventure, and every customer, regardless of location, could savor the full Wonka experience. Through this acquisition, Willie Wonka's journey wasn't just about building a business; it was about crafting a global narrative of sweet indulgence and shared joy.
+
+  ### Example for Cologne Candy Shop OCI DEV context.
+  ```hcl
+  {{ include "examples/02-candy/oci_dev.tf" }}
   ```
 
   ### Example for Istanbul Icecream Industries
@@ -49,6 +66,10 @@ content: |-
   {{ include "examples/05-waffel/test.tf" }}
   ```
 
+  {{ .Requirements }}
+
+  {{ .Providers }}
+  
   {{ .Resources }}
 
   {{ .Inputs }}
