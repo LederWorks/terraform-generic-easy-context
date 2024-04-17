@@ -203,12 +203,6 @@ No resources.
 
 The following input variables are required:
 
-### <a name="input_environment"></a> [environment](#input\_environment)
-
-Description: Environment - place in the SDLC lifecycle
-
-Type: `string`
-
 ### <a name="input_region"></a> [region](#input\_region)
 
 Description: Cloud Region
@@ -256,6 +250,54 @@ Description: Department
 Type: `string`
 
 Default: `""`
+
+### <a name="input_environment"></a> [environment](#input\_environment)
+
+Description: Environment - place in the SDLC lifecycle
+
+Type: `string`
+
+Default: `null`
+
+### <a name="input_environment_aws"></a> [environment\_aws](#input\_environment\_aws)
+
+Description: AWS Environment - place in the SDLC lifecycle
+
+Type: `string`
+
+Default: `null`
+
+### <a name="input_environment_azure"></a> [environment\_azure](#input\_environment\_azure)
+
+Description: Azure Environment - place in the SDLC lifecycle
+
+Type: `string`
+
+Default: `null`
+
+### <a name="input_environment_gcp"></a> [environment\_gcp](#input\_environment\_gcp)
+
+Description: GCP Environment - place in the SDLC lifecycle
+
+Type: `string`
+
+Default: `null`
+
+### <a name="input_environment_oci"></a> [environment\_oci](#input\_environment\_oci)
+
+Description: OCI Environment - place in the SDLC lifecycle
+
+Type: `string`
+
+Default: `null`
+
+### <a name="input_environment_onprem"></a> [environment\_onprem](#input\_environment\_onprem)
+
+Description: OnPrem Environment - place in the SDLC lifecycle
+
+Type: `string`
+
+Default: `null`
 
 ### <a name="input_project"></a> [project](#input\_project)
 

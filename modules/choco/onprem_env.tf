@@ -10,19 +10,28 @@
 locals {
   onprem_env = {
     dev = {
+      splunk_server = {
+        frankfurt = "splunk-dev-01.choco.me"
+      }[local.region]
 
     }
 
     tst = {
-
+      splunk_server = {
+        frankfurt = "splunk-tst-01.choco.me"
+      }[local.region]
     }
 
     ppr = {
-
+      splunk_server = {
+        frankfurt = "splunk-ppr-01.choco.me"
+      }[local.region]
     }
 
     prd = {
-      
+      splunk_server = {
+        frankfurt = "splunk-prd-01.choco.me"
+      }[local.region]
     }
   }
 }
