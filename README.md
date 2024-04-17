@@ -26,7 +26,6 @@ module "context_choco_onprem_prd" {
   source = "../.."
 
   #Common
-  subsidiary  = "choco"
   cloud       = "onprem"
   environment = "prd"
   region      = "frankfurt"
@@ -56,8 +55,6 @@ module "context_choco_azure_dev" {
   source = "../.."
 
   #Common
-  subsidiary  = "choco"
-  cloud       = "azure"
   environment = "dev"
   region      = "germanywestcentral"
 
@@ -87,7 +84,6 @@ module "context_choco_gcp_tst" {
   source = "../.."
 
   #Common
-  subsidiary  = "choco"
   cloud       = "gcp"
   environment = "tst"
   region      = "westeurope"
@@ -115,7 +111,6 @@ module "context_choco_aws_ppr" {
   source = "../.."
 
   #Common
-  subsidiary  = "choco"
   cloud       = "aws"
   environment = "ppr"
   region      = "northeurope"
@@ -240,7 +235,7 @@ The following input variables are optional (have default values):
 
 ### <a name="input_cloud"></a> [cloud](#input\_cloud)
 
-Description: Cloud Provider. Possible values are azure, aws, gcp, oci, onprem.
+Description: Cloud Provider. Possible values are azure, aws, gcp, oci and onprem.
 
 Type: `string`
 
