@@ -21,6 +21,7 @@ locals {
     oci    = ["us-ashburn-1", "us-phoenix-1 ", "us-sanjose-1 ", "eu-frankfurt-1", "eu-amsterdam-1", "eu-london-1"]
     onprem = ["us-central", "us-east", "us-west", "eu-central", "eu-west", "eu-north"]
   }
+  cloud_regions = local.regions[local.cloud]
 
   #Context
   context = merge(

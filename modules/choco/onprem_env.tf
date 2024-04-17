@@ -17,7 +17,7 @@ locals {
         eu-central = "splunk-euc-dev-01.choco.me"
         eu-west    = "splunk-euw-dev-01.choco.me"
         eu-north   = "splunk-eun-dev-01.choco.me"
-      }[local.regions["${local.cloud}"]]
+      }[local.cloud_regions]
 
     }
 
@@ -29,7 +29,7 @@ locals {
         eu-central = "splunk-euc-tst-01.choco.me"
         eu-west    = "splunk-euw-tst-01.choco.me"
         eu-north   = "splunk-eun-tst-01.choco.me"
-      }[local.regions["${local.cloud}"]]
+      }[local.cloud_regions]
     }
 
     ppr = {
@@ -40,7 +40,7 @@ locals {
         eu-central = "splunk-euc-ppr-01.choco.me"
         eu-west    = "splunk-euw-ppr-01.choco.me"
         eu-north   = "splunk-eun-ppr-01.choco.me"
-      }[local.regions["${local.cloud}"]]
+      }[local.cloud_regions]
     }
 
     prd = {
@@ -51,7 +51,7 @@ locals {
         eu-central = "splunk-euc-prd-01.choco.me"
         eu-west    = "splunk-euw-prd-01.choco.me"
         eu-north   = "splunk-eun-prd-01.choco.me"
-      }[local.regions["${local.cloud}"]]
+      }[local.cloud_regions]
     }
   }
 }
