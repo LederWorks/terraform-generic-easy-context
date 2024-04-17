@@ -18,12 +18,6 @@ module "context_choco_onprem_prd" {
     HQ = "Brussels"
   }
 }
-output "context_choco_onprem_prd" {
+output "onprem_prd_context" {
   value = module.context_choco_onprem_prd.context
-}
-output "onprem_prd_cloud_regions" {
-  value = module.context_choco_onprem_prd.cloud_regions
-}
-output "onprem_prd_is_valid_region" {
-  value = module.context_choco_onprem_prd.is_valid_region
 }

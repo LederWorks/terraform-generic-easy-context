@@ -30,6 +30,8 @@ locals {
       cloud       = local.cloud,
       environment = local.environment,
       region      = local.region,
+      cloud_regions = local.cloud_regions,
+      is_valid_region = local.is_valid_region
     },
     local.global,
     {

@@ -3,14 +3,6 @@ output "context" {
   value = local.context
 }
 
-#Regions
-output "cloud_regions" {
-  value = local.cloud_regions
-}
-output "is_valid_region" {
-  value = local.is_valid_region
-}
-
 #Direct Data Access
 output "azure" {
   value = local.azure
