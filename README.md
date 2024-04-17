@@ -141,14 +141,14 @@ The narrative of Willie Wonka's success took a significant turn with the strateg
 
 ### Example for Cologne Candy Shop OCI DEV context.
 ```hcl
-/* module "context_candy_oci_dev" {
+module "context_candy_oci_int" {
   source = "../.."
 
   #Common
   subsidiary  = "candy"
   cloud       = "oci"
-  environment = "dev"
-  region      = "frankfurt"
+  environment = "int"
+  region      = "northeurope"
 
   #General
   department = "logistics"
@@ -162,9 +162,9 @@ The narrative of Willie Wonka's success took a significant turn with the strateg
     HQ = "Cologne"
   }
 }
-output "context_choco_aws_ppr" {
-  value = module.context_choco_aws_ppr.context
-} */
+output "context_candy_oci_int" {
+  value = module.context_candy_oci_int.context
+}
 ```
 
 With his empire expanding and his name synonymous with chocolate, Willie Wonka's ambitious gaze turned to the frosty realm of ice creams. Dreaming of crafting frozen treats that echoed his confectionery's creativity, he sought to launch ice creams under the Wonka brand. However, his plans were soon met with a chilling reception from the EU anti-trust authorities. His intent to acquire Istanbul Icecream Industries—a behemoth that churned out the majority of the world's ice cream—stirred a cauldron of legal battles over monopoly concerns. The authorities feared that such a consolidation would freeze out competition and leave consumers with a vanilla landscape of ice cream choices. Wonka, never one to shy away from a challenge, geared up for a legal labyrinth, his spirit undeterred. He ardently believed that the melding of his chocolate expertise with the ice cream giant would result in a symphony of flavors that could bring even more joy to the world. The outcome of these frigid confrontations remained uncertain, but Wonka's determination to add a scoop of wonder to his sweet empire burned hotter than ever. Finally with the help of his professional legal department and millions of dollars he accomplished this biggest achievement of his life.
@@ -188,7 +188,7 @@ As the years ripened Willie Wonka's legacy, so did his passions evolve. In the g
 # Module Test
 ```
 
-In the intricate dance of managing his global empire, Willie Wonka recognized the need for a harmonious technological symphony. Enter Lederworks, a company renowned for their prowess in terraform infrastructure as code. They crafted for Wonka an ingenious terraform context module, a marvel that seamlessly wove together the diverse tapestry of his subsidiaries and their cloud environments. This framework of constants store became the crown jewel of the empire's IT strategy, enabling every company within the Wonka fold to operate with synchronized precision and agility. It was a digital alchemy that transformed complex IT landscapes into a unified realm, one where resources flowed as smoothly as chocolate from a fountain. Lederworks’ solution was not just a technical feat; it was a testament to Wonka's foresight in embracing innovation to uphold the enchantment of his brand. With this new, formidable tool at his disposal, Willie Wonka's businesses could adapt and thrive in an ever-changing world, bound together by a singular, efficient framework of magic and code.
+In the intricate dance of managing his global empire, Willie Wonka recognized the need for a harmonious technological symphony. Enter Lederworks, an organization renowned for their prowess in terraform infrastructure as code. They crafted for Wonka an ingenious terraform context module, a marvel that seamlessly wove together the diverse tapestry of his subsidiaries and their cloud environments. This framework of constants store became the crown jewel of the empire's IT strategy, enabling every company within the Wonka fold to operate with synchronized precision and agility. It was a digital alchemy that transformed complex IT landscapes into a unified realm, one where resources flowed as smoothly as chocolate from a fountain. Lederworks’ solution was not just a technical feat; it was a testament to Wonka's foresight in embracing innovation to uphold the enchantment of his brand. With this new, formidable tool at his disposal, Willie Wonka's businesses could adapt and thrive in an ever-changing world, bound together by a singular, efficient framework of magic and code.
 
 ## Requirements
 
