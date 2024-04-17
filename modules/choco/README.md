@@ -12,6 +12,12 @@ Description: Cloud Provider. Possible values are azure, aws, gcp, oci and onprem
 
 Type: `string`
 
+### <a name="input_environment"></a> [environment](#input\_environment)
+
+Description: Environment - place in the SDLC lifecycle. Valid values for environment: dev, tst, ppr, prd.
+
+Type: `string`
+
 ### <a name="input_region"></a> [region](#input\_region)
 
 Description: Cloud Region. Valid values for the region: frankfurt, westeurope, northeurope and germanywestcentral.
@@ -20,25 +26,7 @@ Type: `string`
 
 ## Optional Inputs
 
-The following input variables are optional (have default values):
-
-### <a name="input_environment"></a> [environment](#input\_environment)
-
-Description: Environment - place in the SDLC lifecycle. Valid values for environment: dev, tst, ppr, prd.
-
-Type:
-
-```hcl
-object({
-    azure = optional(string)
-    aws = optional(string)
-    gcp = optional(string)
-    oci = optional(string)
-    onprem = optional(string)
-  })
-```
-
-Default: `{}`
+No optional inputs.
 
 ## Outputs
 

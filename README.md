@@ -55,13 +55,7 @@ module "context_choco_azure_dev" {
   source = "../.."
 
   #Common
-  environment = {
-    azure = ["dev", "tst", "ppr", "prd"]
-    aws = ["dev", "tst", "ppr", "prd"]
-    gcp = ["dev", "tst", "ppr", "prd"]
-    oci = ["dev", "tst", "ppr", "prd"]
-    onprem = ["frankfurt"]
-  }
+  environment = "dev"
   region      = "germanywestcentral"
 
   #General
@@ -213,7 +207,7 @@ The following input variables are required:
 
 Description: Environment - place in the SDLC lifecycle
 
-Type: `any`
+Type: `string`
 
 ### <a name="input_region"></a> [region](#input\_region)
 
