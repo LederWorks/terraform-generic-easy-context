@@ -23,7 +23,7 @@ variable "environment" {
   description = "Environment - place in the SDLC lifecycle. Valid values for environment: dev, tst, ppr, prd."
   default     = null
   validation {
-    condition     = contains(["dev", "tst", "ppr", "prd"], var.environment)
+    condition     = contains(["dev", "tst", "ppr", "prd", null], var.environment)
     error_message = "Valid values for environment: dev, tst, ppr, prd"
   }
 }
@@ -33,7 +33,7 @@ variable "environment_azure" {
   description = "Azure Environment - place in the SDLC lifecycle. Valid values for environment: dev, tst, ppr, prd."
   default     = null
   validation {
-    condition     = contains(["dev", "tst", "ppr", "prd"], var.environment_azure)
+    condition     = contains(["dev", "tst", "ppr", "prd", null], var.environment_azure)
     error_message = "Valid values for environment: dev, tst, ppr, prd"
   }
 }
@@ -43,7 +43,7 @@ variable "environment_aws" {
   description = "AWS Environment - place in the SDLC lifecycle. Valid values for environment: dev, tst, ppr, prd."
   default     = null
   validation {
-    condition     = contains(["dev", "tst", "ppr", "prd"], var.environment_aws)
+    condition     = contains(["dev", "tst", "ppr", "prd", null], var.environment_aws)
     error_message = "Valid values for environment: dev, tst, ppr, prd"
   }
 }
@@ -53,7 +53,7 @@ variable "environment_gcp" {
   description = "GCP Environment - place in the SDLC lifecycle. Valid values for environment: dev, tst, ppr, prd."
   default     = null
   validation {
-    condition     = contains(["dev", "tst", "ppr", "prd"], var.environment_gcp)
+    condition     = contains(["dev", "tst", "ppr", "prd", null], var.environment_gcp)
     error_message = "Valid values for environment: dev, tst, ppr, prd"
   }
 }
@@ -63,7 +63,7 @@ variable "environment_oci" {
   description = "OCI Environment - place in the SDLC lifecycle. Valid values for environment: dev, tst, ppr, prd."
   default     = null
   validation {
-    condition     = contains(["dev", "tst", "ppr", "prd"], var.environment_oci)
+    condition     = contains(["dev", "tst", "ppr", "prd", null], var.environment_oci)
     error_message = "Valid values for environment: dev, tst, ppr, prd"
   }
 }
@@ -73,7 +73,7 @@ variable "environment_onprem" {
   description = "OnPrem Environment - place in the SDLC lifecycle. Valid values for environment: frankfurt."
   default     = null
   validation {
-    condition     = contains(["frankfurt"], var.environment_onprem)
+    condition     = contains(["frankfurt", null], var.environment_onprem)
     error_message = "Valid values for environment: frankfurt"
   }
 }
