@@ -9,6 +9,6 @@
 
 locals {
   gcp_global = {
-    
+
   }
 }

@@ -9,6 +9,6 @@
 
 locals {
   aws_global = {
-    
+
   }
 }

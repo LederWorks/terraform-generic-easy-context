@@ -4,8 +4,8 @@
 locals {
   #Context
   context = {
-    choco    = local.subsidiary == "choco" ? module.choco[0].context : null       # Brussels Chocolate Factory
-    candy    = local.subsidiary == "candy" ? module.candy[0].context : null       # Cologne Candy Shop
+    choco = local.subsidiary == "choco" ? module.choco[0].context : null # Brussels Chocolate Factory
+    candy = local.subsidiary == "candy" ? module.candy[0].context : null # Cologne Candy Shop
     # icecream = local.subsidiary == "icecream" ? module.icecream[0].context : null # Istanbul Icecream Industries
     # muffin   = local.subsidiary == "muffin" ? module.muffin[0].context : null     # London Muffin Manufactures
     # waffel   = local.subsidiary == "waffel" ? module.candy[0].context : null      # Amsterdam Waffel Works
@@ -21,8 +21,8 @@ locals {
   } : null
 
   all_candy = local.subsidiary == "candy" ? {
-    azure  = module.candy[0].azure
-    oci    = module.candy[0].oci
+    azure = module.candy[0].azure
+    oci   = module.candy[0].oci
   } : null
 
   # all_icecream = local.subsidiary == "icecream" ? {

@@ -9,6 +9,6 @@
 
 locals {
   onprem_global = {
-    
+
   }
 }

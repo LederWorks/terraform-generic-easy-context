@@ -9,6 +9,6 @@
 
 locals {
   oci_global = {
-    
+
   }
 }
