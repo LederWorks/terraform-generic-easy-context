@@ -1,11 +1,11 @@
-/* module "context_candy_oci_dev" {
+module "context_candy_oci_int" {
   source = "../.."
 
   #Common
   subsidiary  = "candy"
   cloud       = "oci"
-  environment = "dev"
-  region      = "frankfurt"
+  environment = "int"
+  region      = "northeurope"
 
   #General
   department = "logistics"
@@ -19,6 +19,6 @@
     HQ = "Cologne"
   }
 }
-output "context_choco_aws_ppr" {
-  value = module.context_choco_aws_ppr.context
-} */
+output "context_candy_oci_int" {
+  value = module.context_candy_oci_int.context
+}
