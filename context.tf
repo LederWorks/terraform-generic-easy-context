@@ -22,10 +22,7 @@ locals {
 
   all_candy = local.subsidiary == "candy" ? {
     azure  = module.candy[0].azure
-    aws    = module.candy[0].aws
-    gcp    = module.candy[0].gcp
     oci    = module.candy[0].oci
-    onprem = module.candy[0].onprem
   } : null
 
   # all_icecream = local.subsidiary == "icecream" ? {
