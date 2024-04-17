@@ -40,19 +40,11 @@ Description: n/a
 
 Description: Direct Data Access
 
-### <a name="output_cloud_regions"></a> [cloud\_regions](#output\_cloud\_regions)
-
-Description: Regions
-
 ### <a name="output_context"></a> [context](#output\_context)
 
 Description: Context
 
 ### <a name="output_gcp"></a> [gcp](#output\_gcp)
-
-Description: n/a
-
-### <a name="output_is_valid_region"></a> [is\_valid\_region](#output\_is\_valid\_region)
 
 Description: n/a
 
