@@ -8,7 +8,6 @@
 # \__|  \__|\________| \______/ \__|  \__|\________|      \________|\__|  \__|    \_/    
 
 locals {
-  #Subsidiary 01 Azure Environment specific values
   azure_env = {
 
     # $$$$$$$\  $$$$$$$$\ $$\    $$\ 
@@ -118,23 +117,23 @@ locals {
 
     prd = {
       log_analytics_workspace_id = {
-        northeurope        = ""
+        northeurope        = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rgrp-neu-prd-example-01/providers/Microsoft.OperationalInsights/workspaces/laws-neu-prd-example-01"
         westeurope         = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rgrp-weu-prd-example-01/providers/Microsoft.OperationalInsights/workspaces/laws-weu-prd-example-01"
-        germanywestcentral = ""
+        germanywestcentral = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rgrp-gwc-prd-example-01/providers/Microsoft.OperationalInsights/workspaces/laws-gwc-prd-example-01"
         frankfurt          = "frankfurt is only valid for onprem"
       }[local.region]
 
       dce_linux_id = {
-        northeurope        = ""
+        northeurope        = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rgrp-neu-prd-example-01/providers/Microsoft.Insights/dataCollectionEndpoints/dcep-neu-prd-example-linux-01"
         westeurope         = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rgrp-weu-prd-example-01/providers/Microsoft.Insights/dataCollectionEndpoints/dcep-weu-prd-example-linux-01"
-        germanywestcentral = ""
+        germanywestcentral = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rgrp-gwc-prd-example-01/providers/Microsoft.Insights/dataCollectionEndpoints/dcep-gwc-prd-example-linux-01"
         frankfurt          = "frankfurt is only valid for onprem"
       }[local.region]
 
       dce_win_id = {
-        northeurope        = ""
+        northeurope        = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rgrp-neu-prd-example-01/providers/Microsoft.Insights/dataCollectionEndpoints/dcep-neu-prd-example-win-01"
         westeurope         = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rgrp-weu-prd-example-01/providers/Microsoft.Insights/dataCollectionEndpoints/dcep-weu-prd-example-win-01"
-        germanywestcentral = ""
+        germanywestcentral = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rgrp-gwc-prd-example-01/providers/Microsoft.Insights/dataCollectionEndpoints/dcep-gwc-prd-example-win-01"
         frankfurt          = "frankfurt is only valid for onprem"
       }[local.region]
     }

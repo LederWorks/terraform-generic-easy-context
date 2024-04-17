@@ -19,7 +19,7 @@ variable "cloud" {
 
 #Environments
 variable "environment" {
-  type = string
+  type        = string
   description = "Environment - place in the SDLC lifecycle. Valid values for environment: dev, tst, ppr, prd."
   validation {
     condition     = contains(["dev", "tst", "ppr", "prd"], var.environment)

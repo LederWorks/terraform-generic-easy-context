@@ -9,16 +9,16 @@
 
 locals {
   #Input Parameters
-  cloud = var.cloud
-  environment        = var.environment
-  region             = var.region
+  cloud       = var.cloud
+  environment = var.environment
+  region      = var.region
 
   #Context
   context = merge(
     {
-      cloud              = local.cloud,
-      environment        = local.environment,
-      region             = local.region,
+      cloud       = local.cloud,
+      environment = local.environment,
+      region      = local.region,
     },
     local.global,
     {
