@@ -23,14 +23,32 @@ locals {
   context = merge(
     {
       cloud              = local.cloud,
-      environment        = local.environment,
-      environment_azure  = local.environment_azure,
-      environment_aws    = local.environment_aws,
-      environment_gcp    = local.environment_gcp,
-      environment_oci    = local.environment_oci,
-      environment_onprem = local.environment_onprem,
+      # environment        = local.environment,
+      # environment_azure  = local.environment_azure,
+      # environment_aws    = local.environment_aws,
+      # environment_gcp    = local.environment_gcp,
+      # environment_oci    = local.environment_oci,
+      # environment_onprem = local.environment_onprem,
       region             = local.region,
     },
+    local.environment != null ? {
+      environment = local.environment
+    } : {},
+    local.environment_azure != null ? {
+      environment_azure = local.environment_azure
+    } : {},
+    local.environment_aws != null ? {
+      environment_aws = local.environment_aws
+    } : {},
+    local.environment_gcp != null ? {
+      environment_gcp = local.environment_gcp
+    } : {},
+    local.environment_oci != null ? {
+      environment_oci = local.environment_oci
+    } : {},
+    local.environment_onprem != null ? {
+      environment_onprem = local.environment_onprem
+    } : {},
     local.global,
     {
       azure = merge(
