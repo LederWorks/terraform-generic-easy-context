@@ -45,13 +45,19 @@ module "context_choco_onprem_prd" {
 output "context_choco_onprem_prd" {
   value = module.context_choco_onprem_prd.context
 }
+output "onprem_prd_cloud_regions" {
+  value = module.context_choco_onprem_prd.cloud_regions
+}
+output "onprem_prd_is_valid_region" {
+  value = module.context_choco_onprem_prd.is_valid_region
+}
 ```
 
 As the demand for Wonka's confections soared, so too did the need for a robust, scalable, and more secure IT infrastructure. The on-premise data centers, once the heart of Wonka's technological endeavors, began to buckle under the strain of global operations. It was the dawn of the cloud computing era, and Willie Wonka, ever the visionary, saw the boundless potential it offered. The firm embarked on a bold transition, shifting critical systems to the public cloud infrastructures of Azure, AWS, and GCP. This move to the cloud allowed for unparalleled agility and scale, ensuring that the magical world of Wonka's chocolate could reach farther and enchant more people than ever before. Data flowed like rivers of liquid chocolate, seamlessly connecting every corner of the Wonka empire. The transition was not without its challenges, but under Wonka's unwavering guidance, the company emerged more resilient and connected, poised to conquer new markets and delight customers with every sugary creation.
 
 ### Example for Brussels Chocolate Factory with Azure DEV context.
 ```hcl
-module "context_choco_azure_dev" {
+/* module "context_choco_azure_dev" {
   source = "../.."
 
   #Common
@@ -73,9 +79,16 @@ module "context_choco_azure_dev" {
 output "context_choco_azure_dev" {
   value = module.context_choco_azure_dev.context
 }
+output "azure_dev_cloud_regions" {
+  value = module.context_choco_azure_dev.cloud_regions
+}
+output "azure_dev_is_valid_region" {
+  value = module.context_choco_azure_dev.is_valid_region
+}
 output "all_choco" {
   value = module.context_choco_azure_dev.all_choco
 }
+ */
 ```
 
 ### Example for Brussels Chocolate Factory with GCP TST context.
