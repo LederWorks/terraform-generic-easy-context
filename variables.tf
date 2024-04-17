@@ -27,7 +27,7 @@ variable "cloud" {
 
 #Environments
 variable "environment" {
-  type        = any
+  type        = string
   description = "Environment - place in the SDLC lifecycle"
 }
 

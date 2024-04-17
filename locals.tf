@@ -5,5 +5,4 @@ locals {
   environment = var.environment
   project     = var.project
   tags        = merge(var.custom_tags, var.tags)
-
 }

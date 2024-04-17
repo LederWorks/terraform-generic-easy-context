@@ -10,65 +10,37 @@
 locals {
   #Input Parameters
   cloud = var.cloud
-
-  #Environments
-  # environment        = var.environment
-  environment_azure  = var.environment[var.cloud]
-  environment_aws    = var.environment[var.cloud]
-  environment_gcp    = var.environment[var.cloud]
-  environment_oci    = var.environment[var.cloud]
-  environment_onprem = var.environment[var.cloud]
-
+  environment        = var.environment
   region             = var.region
 
   #Context
   context = merge(
     {
       cloud              = local.cloud,
-      # environment        = local.environment,
-      # environment_azure  = local.environment_azure,
-      # environment_aws    = local.environment_aws,
-      # environment_gcp    = local.environment_gcp,
-      # environment_oci    = local.environment_oci,
-      # environment_onprem = local.environment_onprem,
+      environment        = local.environment,
       region             = local.region,
     },
-    local.environment_azure != null ? {
-      environment_azure = local.environment_azure
-    } : {},
-    local.environment_aws != null ? {
-      environment_aws = local.environment_aws
-    } : {},
-    local.environment_gcp != null ? {
-      environment_gcp = local.environment_gcp
-    } : {},
-    local.environment_oci != null ? {
-      environment_oci = local.environment_oci
-    } : {},
-    local.environment_onprem != null ? {
-      environment_onprem = local.environment_onprem
-    } : {},
     local.global,
     {
       azure = merge(
         local.azure_global,
-        local.azure_env[local.environment_azure]
+        local.azure_env[local.environment]
       )
       aws = merge(
         local.aws_global,
-        local.aws_env[local.environment_aws]
+        local.aws_env[local.environment]
       )
       gcp = merge(
         local.gcp_global,
-        local.gcp_env[local.environment_gcp]
+        local.gcp_env[local.environment]
       )
       oci = merge(
         local.oci_global,
-        local.oci_env[local.environment_oci]
+        local.oci_env[local.environment]
       )
       onprem = merge(
         local.onprem_global,
-        local.onprem_env[local.environment_onprem]
+        local.onprem_env[local.environment]
       )
     }[local.cloud]
   )
