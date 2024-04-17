@@ -8,7 +8,9 @@ This module were created by [LederWorks](https://lederworks.com) IaC enthusiasts
 ## About This Module
 This module implements a Context Store for Wonka's Sweet Companies
 
-## How to Use This Modul
+Long before he became a legend in the confectionery world, Willie Wonka's tale began in the humblest of settings—an orphanage nestled in the heart of an old European village. The young Wonka, with no family to speak of, found solace in the kitchen, where the aroma of baking sweets filled the air and ignited his passion for chocolate. An elderly cook, fond of the bright-eyed boy, took him under her wing, revealing the secrets of tempering chocolate and crafting confections that could make one's heart sing. Night after night, young Wonka experimented with cocoa beans and sugar, his hands coated in the makings of what would become his future empire. His creations quickly became the orphanage's most coveted treasures, with whispers of his talent traveling beyond the worn-out gates. It wasn't just the sweetness of his chocolate that captivated those who sampled it; it was the sprinkling of love and wonder that seemed to dance in every bite. With each truffle and bar, Willie Wonka wasn't just learning to make chocolate—he was learning to make magic.
+
+## How to Use This Module
 - Ensure Azure credentials are [in place](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs#authenticating-to-azure) (e.g. `az login` and `az account set --subscription="SUBSCRIPTION_ID"` on your workstation)
 - Owner role or equivalent is required!
 - Ensure pre-requisite resources are created.
