@@ -11,7 +11,7 @@ locals {
     # waffel   = local.subsidiary == "waffel" ? module.candy[0].context : null      # Amsterdam Waffel Works
   }[local.subsidiary]
 
-  #Direct Data Access V2
+  #Direct Data Access
   all_choco = local.subsidiary == "choco" ? {
     azure  = module.choco[0].azure
     aws    = module.choco[0].aws
