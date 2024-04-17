@@ -1,5 +1,13 @@
 # Change Log
 
+## v0.5.0 [current]
+ENHANCEMENTS:
+- Added cloud specific environments as an environment object
+
+## v0.4.0 [deprecated]
+ENHANCEMENTS:
+- Added cloud specific environment variables
+
 ## v0.3.0 [current]
 FEATURES:
 - Added the Candy Shop

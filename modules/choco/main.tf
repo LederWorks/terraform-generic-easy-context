@@ -10,13 +10,15 @@
 locals {
   #Input Parameters
   cloud = var.cloud
+
   #Environments
-  environment        = var.environment
-  environment_azure  = var.environment_azure
-  environment_aws    = var.environment_aws
-  environment_gcp    = var.environment_gcp
-  environment_oci    = var.environment_oci
-  environment_onprem = var.environment_onprem
+  # environment        = var.environment
+  environment_azure  = var.environment[var.cloud]
+  environment_aws    = var.environment[var.cloud]
+  environment_gcp    = var.environment[var.cloud]
+  environment_oci    = var.environment[var.cloud]
+  environment_onprem = var.environment[var.cloud]
+
   region             = var.region
 
   #Context
@@ -31,9 +33,6 @@ locals {
       # environment_onprem = local.environment_onprem,
       region             = local.region,
     },
-    local.environment != null ? {
-      environment = local.environment
-    } : {},
     local.environment_azure != null ? {
       environment_azure = local.environment_azure
     } : {},
@@ -53,19 +52,19 @@ locals {
     {
       azure = merge(
         local.azure_global,
-        local.azure_env[local.environment]
+        local.azure_env[local.environment_azure]
       )
       aws = merge(
         local.aws_global,
-        local.aws_env[local.environment]
+        local.aws_env[local.environment_aws]
       )
       gcp = merge(
         local.gcp_global,
-        local.gcp_env[local.environment]
+        local.gcp_env[local.environment_gcp]
       )
       oci = merge(
         local.oci_global,
-        local.oci_env[local.environment]
+        local.oci_env[local.environment_oci]
       )
       onprem = merge(
         local.onprem_global,
