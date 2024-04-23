@@ -18,6 +18,12 @@ Description: Cloud Provider. Possible values are azure, aws, gcp, oci and onprem
 
 Type: `string`
 
+### <a name="input_department"></a> [department](#input\_department)
+
+Description: Department
+
+Type: `string`
+
 ### <a name="input_environment"></a> [environment](#input\_environment)
 
 Description: Environment - place in the SDLC lifecycle. Valid values for environment: dev, tst, ppr, prd.
@@ -30,15 +36,35 @@ Description: Short region map for OCI.
 
 Type: `any`
 
+### <a name="input_project"></a> [project](#input\_project)
+
+Description: Project code
+
+Type: `string`
+
 ### <a name="input_region"></a> [region](#input\_region)
 
 Description: Cloud Region. Valid values for the region: frankfurt, westeurope, northeurope and germanywestcentral.
 
 Type: `string`
 
+### <a name="input_tags"></a> [tags](#input\_tags)
+
+Description: Resource Tags
+
+Type: `map(string)`
+
 ## Optional Inputs
 
-No optional inputs.
+The following input variables are optional (have default values):
+
+### <a name="input_subsidiary"></a> [subsidiary](#input\_subsidiary)
+
+Description: Subsidiary
+
+Type: `string`
+
+Default: `"choco"`
 
 ## Outputs
 
