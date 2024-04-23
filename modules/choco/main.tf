@@ -18,7 +18,7 @@ locals {
     azure  = ["eastus2", "centralus", "westus2", "northeurope", "westeurope", "germanywestcentral"]
     aws    = ["us-east-1", "us-west-1", "us-west-2", "eu-west-1", "eu-central-1", "eu-north-1"]
     gcp    = ["us-central1", "us-east1", "us-west1", "europe-west1", "europe-west2", "europe-west3"]
-    oci    = ["us-ashburn-1", "us-phoenix-1 ", "us-sanjose-1 ", "eu-frankfurt-1", "eu-amsterdam-1", "eu-london-1"]
+    oci    = ["us-ashburn-1", "us-phoenix-1", "us-sanjose-1", "eu-frankfurt-1", "eu-amsterdam-1", "eu-london-1"]
     onprem = ["us-central", "us-east", "us-west", "eu-central", "eu-west", "eu-north"]
   }
 

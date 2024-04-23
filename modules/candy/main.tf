@@ -16,7 +16,7 @@ locals {
   #Regions
   regions = {
     azure  = ["eastus2", "centralus", "westus2", "northeurope", "westeurope", "germanywestcentral"]
-    oci    = ["us-ashburn-1", "us-phoenix-1 ", "us-sanjose-1 ", "eu-frankfurt-1", "eu-amsterdam-1", "eu-london-1"]
+    oci    = ["us-ashburn-1", "us-phoenix-1", "us-sanjose-1", "eu-frankfurt-1", "eu-amsterdam-1", "eu-london-1"]
   }
 
   #Check whether the region is valid for the cloud provider
