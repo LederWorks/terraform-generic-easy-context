@@ -1,6 +1,17 @@
 # Change Log
 
-## v0.5.0 [current]
+## v0.6.0 [current]
+FEATURES:
+- Added OCI data
+- Added support for dynamic OCI region short names via the oci_regions input parameter
+
+ENHANCEMENTS:
+- Updated go task to v5, which supports caching
+
+BUG FIXES:
+- Fixed tailing white spaces after some region names
+
+## v0.5.0
 FEATURES:
 - Added GCP data
 
