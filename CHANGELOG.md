@@ -1,6 +1,10 @@
 # Change Log
 
-## v0.6.0 [current]
+## v0.6.1 [current]
+BUG FIXES:
+- Fixed missing project in Candy's context
+
+## v0.6.0
 FEATURES:
 - Added OCI data
 - Added support for dynamic OCI region short names via the oci_regions input parameter

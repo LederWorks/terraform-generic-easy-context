@@ -1,7 +1,7 @@
 name: Terratest - terraform-generic-easy-context - 04-muffin
 
-on:
-  - pull_request
+# on:
+#   - pull_request
 
 jobs:
   build:
