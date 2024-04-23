@@ -3,7 +3,7 @@ module "azure_regions" {
   source  = "Azure/regions/azurerm"
   version = "0.6.0"
 
-  use_cached_data = false
+  # use_cached_data          = false
   recommended_regions_only = false
 }
 output "azure_regions" {
