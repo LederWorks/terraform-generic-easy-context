@@ -10,7 +10,7 @@
 locals {
   oci_env = {
     int = {
-      log_group_id = is_valid_oci_region ? {
+      log_group_id = local.is_valid_oci_region ? {
         us-ashburn-1 = "ocid1.loggroup.oc1.iad.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaint"
         us-phoenix-1 = "ocid1.loggroup.oc1.phx.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaint"
         us-sanjose-1 = "ocid1.loggroup.oc1.sjc.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaint"
@@ -22,7 +22,7 @@ locals {
     }
 
     uat = {
-      log_group_id = is_valid_oci_region ? {
+      log_group_id = local.is_valid_oci_region ? {
         us-ashburn-1 = "ocid1.loggroup.oc1.iad.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaauat"
         us-phoenix-1 = "ocid1.loggroup.oc1.phx.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaauat"
         us-sanjose-1 = "ocid1.loggroup.oc1.sjc.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaauat"
@@ -34,7 +34,7 @@ locals {
     }
 
     prd = {
-      log_group_id = is_valid_oci_region ? {
+      log_group_id = local.is_valid_oci_region ? {
         us-ashburn-1 = "ocid1.loggroup.oc1.iad.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaprd"
         us-phoenix-1 = "ocid1.loggroup.oc1.phx.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaprd"
         us-sanjose-1 = "ocid1.loggroup.oc1.sjc.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaprd"
