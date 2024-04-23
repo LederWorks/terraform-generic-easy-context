@@ -18,6 +18,10 @@ module "context_candy_oci_int" {
   custom_tags = {
     HQ = "Cologne"
   }
+
+  #Regions
+  oci_regions = data.oci_identity_regions.regions.regions
+
 }
 output "context_candy_oci_int" {
   value = module.context_candy_oci_int.context
