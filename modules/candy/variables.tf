@@ -32,8 +32,8 @@ variable "region" {
   type        = string
   description = "Cloud Region"
   validation {
-    condition     = contains([
-      "eastus2", "centralus", "westus2", "northeurope", "westeurope", "germanywestcentral",                #Azure
+    condition = contains([
+      "eastus2", "centralus", "westus2", "northeurope", "westeurope", "germanywestcentral",              #Azure
       "us-ashburn-1", "us-phoenix-1", "us-sanjose-1", "eu-frankfurt-1", "eu-amsterdam-1", "eu-london-1", #OCI
     ], var.region)
     error_message = <<EOT
@@ -45,6 +45,6 @@ variable "region" {
 }
 
 variable "oci_regions" {
-  type = any
+  type        = any
   description = "Short region map for OCI."
 }

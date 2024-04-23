@@ -4,8 +4,8 @@ locals {
 
   #Regions
   regions = {
-    azure  = ["eastus2", "centralus", "westus2", "northeurope", "westeurope", "germanywestcentral"]
-    oci    = ["us-ashburn-1", "us-phoenix-1", "us-sanjose-1", "eu-frankfurt-1", "eu-amsterdam-1", "eu-london-1"]
+    azure = ["eastus2", "centralus", "westus2", "northeurope", "westeurope", "germanywestcentral"]
+    oci   = ["us-ashburn-1", "us-phoenix-1", "us-sanjose-1", "eu-frankfurt-1", "eu-amsterdam-1", "eu-london-1"]
   }
 
   #Check whether the region is valid for the cloud provider
@@ -13,8 +13,8 @@ locals {
   is_valid_region = contains(local.cloud_regions, local.region)
 
   #Check whether specific clouds are valid for the region
-  is_valid_azure_region  = contains(local.regions["azure"], local.region)
-  is_valid_oci_region    = contains(local.regions["oci"], local.region)
+  is_valid_azure_region = contains(local.regions["azure"], local.region)
+  is_valid_oci_region   = contains(local.regions["oci"], local.region)
 
   #Short Regions
   short_region = {
@@ -29,6 +29,7 @@ locals {
 
     #OCI now uses a central set of short region codes, which can be sourced both dynamically and statically
     oci = local.is_valid_oci_region ? local.oci_regions[local.region] : null
+
   }[local.cloud]
 
 }

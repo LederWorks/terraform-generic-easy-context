@@ -34,21 +34,21 @@ locals {
     }[local.region] : null
 
     aws = local.is_valid_aws_region ? {
-      "us-east-1"   = "ue1"
-      "us-west-1"   = "uw1"
-      "us-west-2"   = "uw2"
-      "eu-west-1"   = "ew1"
+      "us-east-1"    = "ue1"
+      "us-west-1"    = "uw1"
+      "us-west-2"    = "uw2"
+      "eu-west-1"    = "ew1"
       "eu-central-1" = "ec1"
-      "eu-north-1"  = "en1"
+      "eu-north-1"   = "en1"
     }[local.region] : null
 
     gcp = local.is_valid_gcp_region ? {
-      "us-central1"   = "uc1"
-      "us-east1"      = "ue1"
-      "us-west1"      = "uw1"
-      "europe-west1"  = "ew1"
-      "europe-west2"  = "ew2"
-      "europe-west3"  = "ew3"
+      "us-central1"  = "uc1"
+      "us-east1"     = "ue1"
+      "us-west1"     = "uw1"
+      "europe-west1" = "ew1"
+      "europe-west2" = "ew2"
+      "europe-west3" = "ew3"
     }[local.region] : null
 
     #OCI now uses a central set of short region codes, which can be sourced both dynamically and statically

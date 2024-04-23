@@ -87,8 +87,8 @@ variable "custom_tags" {
 # \__|  \__|\________| \______/ \______| \______/ \__|  \__| \______/ 
 
 variable "oci_regions" {
-  type = any
-  default = null
+  type        = any
+  default     = null
   description = <<EOT
   You can use this variable to dynamically define the region short codes for all available regions in OCI.
 
