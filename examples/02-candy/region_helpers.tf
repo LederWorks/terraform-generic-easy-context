@@ -1,7 +1,7 @@
 #Dynamic Azure Regions
 module "azure_regions" {
-  source  = "Azure/regions/azurerm"
-  version = "0.6.0"
+  source                   = "Azure/regions/azurerm"
+  version                  = "0.6.0"
   recommended_regions_only = false
 }
 output "azure_regions" {

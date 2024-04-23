@@ -14,7 +14,7 @@ locals {
     #Canada
     canadacentral = "cac"
     #South America
-    brazilsouth   = "brs"
+    brazilsouth = "brs"
     #Asia Pacific
     australiaeast = "aue"
     eastasia      = "eas"
@@ -45,28 +45,28 @@ locals {
   azure_regions_static_no_zone = {
     #United States
     northcentralus = "ncu"
-    westus        = "wus"
-    westcentralus = "wcu"
+    westus         = "wus"
+    westcentralus  = "wcu"
     #Canada
     canadaeast = "cae"
     #South America
-    brazilusouth  = "bus"
+    brazilusouth    = "bus"
     brazilsoutheast = "bse"
     #Asia Pacific
-    australiacentral = "auc"
-    australiacentral2 = "au2"
+    australiacentral   = "auc"
+    australiacentral2  = "au2"
     australiasoutheast = "aus"
-    japanwest     = "jpw"
-    koreasouth    = "kos"
-    southindia    = "sin"
-    westindia     = "win"
-    jioindiawest  = "jiw"
-    jioindiacentral = "jic"
+    japanwest          = "jpw"
+    koreasouth         = "kos"
+    southindia         = "sin"
+    westindia          = "win"
+    jioindiawest       = "jiw"
+    jioindiacentral    = "jic"
     #Europe
-    ukwest        = "ukw"
-    francesouth = "frs"
-    germanynorth = "gno"
-    norwaywest = "now"
+    ukwest          = "ukw"
+    francesouth     = "frs"
+    germanynorth    = "gno"
+    norwaywest      = "now"
     switzerlandwest = "chw"
     #Middle East
     uaecentral = "uac"
@@ -75,7 +75,7 @@ locals {
   }
 
   #Merged Short Regions Map
-  azure_short_regions = var.azure_region_recommended_only ? local.azure_regions_static_zone_aware :  merge(local.azure_regions_static_no_zone, local.azure_regions_static_zone_aware)
+  azure_short_regions = var.azure_region_recommended_only ? local.azure_regions_static_zone_aware : merge(local.azure_regions_static_no_zone, local.azure_regions_static_zone_aware)
 
 }
 output "azure_short_regions" {

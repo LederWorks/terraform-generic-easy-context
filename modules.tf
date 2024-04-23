@@ -4,12 +4,13 @@
 
 #Brussels Chocolate Factory
 module "choco" {
-  count       = local.subsidiary == "choco" ? 1 : 0
-  source      = "./modules/choco"
-  cloud       = local.cloud
-  environment = local.environment
-  region      = local.region
-  oci_regions = local.oci_short_regions
+  count         = local.subsidiary == "choco" ? 1 : 0
+  source        = "./modules/choco"
+  cloud         = local.cloud
+  environment   = local.environment
+  region        = local.region
+  azure_regions = local.azure_short_regions
+  oci_regions   = local.oci_short_regions
 }
 
 #Cologne Candy Shop

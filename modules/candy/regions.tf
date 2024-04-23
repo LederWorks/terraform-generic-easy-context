@@ -1,7 +1,7 @@
 locals {
   #Input Parameters
   azure_regions = var.azure_regions
-  oci_regions = var.oci_regions
+  oci_regions   = var.oci_regions
 
   #Regions
   regions = {
