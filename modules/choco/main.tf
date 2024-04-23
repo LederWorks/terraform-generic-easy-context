@@ -71,7 +71,7 @@ locals {
       "eu-london-1"    = "el1"
     }[local.region] : null
 
-    onprem = is_valid_onprem_region ? {
+    onprem = local.is_valid_onprem_region ? {
       "us-central" = "usc"
       "us-east"    = "use"
       "us-west"    = "usw"
