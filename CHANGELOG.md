@@ -7,6 +7,9 @@ FEATURES:
 
 ENHANCEMENTS:
 - Updated go task to v5, which supports caching
+- Updated terraform task to v3
+- Updated checkout task to v4
+- Updated setup-terraform to v3
 
 BUG FIXES:
 - Fixed tailing white spaces after some region names
