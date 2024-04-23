@@ -4,5 +4,6 @@ locals {
   region      = var.region
   environment = var.environment
   project     = var.project
+  department  = var.department
   tags        = merge(var.custom_tags, var.tags)
 }

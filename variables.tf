@@ -50,10 +50,6 @@ variable "project" {
   type        = string
   default     = ""
   description = "Project code"
-  validation {
-    condition     = (var.project == "") || (can(regex("^[A-Za-z0-9]{2,}$", var.project)))
-    error_message = "Only alphanumeric characters are allowed and project code should contain at least two characters."
-  }
 }
 
 variable "department" {

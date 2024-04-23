@@ -12,6 +12,9 @@ locals {
   cloud       = var.cloud
   environment = var.environment
   region      = var.region
+  project     = var.project
+  department  = var.department
+  tags        = var.tags
 
   #Context
   context = merge(
@@ -21,6 +24,9 @@ locals {
       region        = local.region,
       cloud_regions = local.cloud_regions,
       short_region  = local.short_region,
+      project       = local.project,
+      department    = local.department,
+      tags          = local.tags
     },
     local.global,
     {

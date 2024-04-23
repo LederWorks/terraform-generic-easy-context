@@ -7,6 +7,13 @@
 # \$$$$$$  | $$$$$$  |$$ | \_/ $$ |$$ | \_/ $$ | $$$$$$  |$$ | \$$ |
 #  \______/  \______/ \__|     \__|\__|     \__| \______/ \__|  \__|
 
+#Subsidiary
+variable "subsidiary" {
+  type        = string
+  default     = "choco"
+  description = "Subsidiary"
+}
+
 #Cloud
 variable "cloud" {
   type        = string
@@ -27,7 +34,7 @@ variable "environment" {
   }
 }
 
-#Region
+#Regions
 variable "region" {
   type        = string
   description = "Cloud Region. Valid values for the region: frankfurt, westeurope, northeurope and germanywestcentral."
@@ -58,4 +65,26 @@ variable "azure_regions" {
 variable "oci_regions" {
   type        = any
   description = "Short region map for OCI."
+}
+
+#Project
+variable "project" {
+  type        = string
+  description = "Project code"
+  validation {
+    condition     = (var.project == "") || (can(regex("^[A-Za-z0-9]{2,}$", var.project)))
+    error_message = "Only alphanumeric characters are allowed and project code should contain at least two characters."
+  }
+}
+
+#Department
+variable "department" {
+  type        = string
+  description = "Department"
+}
+
+#Tags
+variable "tags" {
+  type        = map(string)
+  description = "Resource Tags"
 }
