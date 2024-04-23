@@ -86,6 +86,31 @@ variable "custom_tags" {
 # $$ |  $$ |$$$$$$$$\ \$$$$$$  |$$$$$$\  $$$$$$  |$$ | \$$ |\$$$$$$  |
 # \__|  \__|\________| \______/ \______| \______/ \__|  \__| \______/ 
 
+variable "azure_regions" {
+  type        = any
+  default     = null
+  description = <<EOT
+  You can use this variable to dynamically define the region short codes for all available regions in Azure.
+
+  You can use the https://github.com/Azure/terraform-azurerm-regions module with the Azure/azapi provider:
+
+  ```hcl
+  module "regions" {
+    source  = "Azure/regions/azurerm"
+    version = "0.6.0"
+  }
+  ```
+
+  And feed the output of the module to the context module:
+
+  ```hcl
+  module "context" {
+    azure_regions = module.regions.regions
+  }
+  ```
+  EOT
+}
+
 variable "oci_regions" {
   type        = any
   default     = null

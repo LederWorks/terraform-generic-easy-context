@@ -27,7 +27,7 @@ variable "environment" {
   }
 }
 
-#Region
+#Regions
 variable "region" {
   type        = string
   description = "Cloud Region"
@@ -42,6 +42,11 @@ variable "region" {
     oci    = ["us-ashburn-1", "us-phoenix-1", "us-sanjose-1", "eu-frankfurt-1", "eu-amsterdam-1", "eu-london-1"]
     EOT
   }
+}
+
+variable "azure_regions" {
+  type        = any
+  description = "Short region map for Azure."
 }
 
 variable "oci_regions" {

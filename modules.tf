@@ -19,6 +19,7 @@ module "candy" {
   cloud       = local.cloud
   environment = local.environment
   region      = local.region
+  azure_regions = local.azure_short_regions
   oci_regions = local.oci_short_regions
 }
 
