@@ -6,6 +6,12 @@ Context module for Brussels Chocolate Factory
 
 The following input variables are required:
 
+### <a name="input_azure_regions"></a> [azure\_regions](#input\_azure\_regions)
+
+Description: Short region map for Azure.
+
+Type: `any`
+
 ### <a name="input_cloud"></a> [cloud](#input\_cloud)
 
 Description: Cloud Provider. Possible values are azure, aws, gcp, oci and onprem.
@@ -17,6 +23,12 @@ Type: `string`
 Description: Environment - place in the SDLC lifecycle. Valid values for environment: dev, tst, ppr, prd.
 
 Type: `string`
+
+### <a name="input_oci_regions"></a> [oci\_regions](#input\_oci\_regions)
+
+Description: Short region map for OCI.
+
+Type: `any`
 
 ### <a name="input_region"></a> [region](#input\_region)
 

@@ -76,10 +76,6 @@ module "context_choco_azure_dev" {
 output "azure_dev_context" {
   value = module.context_choco_azure_dev.context
 }
-
-output "oci_regions" {
-  value = module.context_choco_azure_dev.oci_regions
-}
 ```
 
 ### Example for Brussels Chocolate Factory with GCP TST context.
@@ -160,6 +156,10 @@ module "context_candy_oci_int" {
   custom_tags = {
     HQ = "Cologne"
   }
+
+  #Regions
+  oci_regions = data.oci_identity_regions.regions.regions
+
 }
 output "context_candy_oci_int" {
   value = module.context_candy_oci_int.context
@@ -237,6 +237,39 @@ object({
 
 The following input variables are optional (have default values):
 
+### <a name="input_azure_region_recommended_only"></a> [azure\_region\_recommended\_only](#input\_azure\_region\_recommended\_only)
+
+Description: (Optional) Only return recommended regions for Azure.
+
+Type: `bool`
+
+Default: `true`
+
+### <a name="input_azure_regions"></a> [azure\_regions](#input\_azure\_regions)
+
+Description:   You can use this variable to dynamically populate data for all available regions in Azure.
+
+  You can use the https://github.com/Azure/terraform-azurerm-regions module with the Azure/azapi provider:
+
+  ```hcl
+  module "regions" {
+    source  = "Azure/regions/azurerm"
+    version = "0.6.0"
+  }
+```
+
+  And feed the output of the module to the context module:
+
+  ```hcl
+  module "context" {
+    azure_regions = module.regions.regions
+  }
+```
+
+Type: `any`
+
+Default: `null`
+
 ### <a name="input_cloud"></a> [cloud](#input\_cloud)
 
 Description: Cloud Provider. Possible values are azure, aws, gcp, oci and onprem.
@@ -305,6 +338,10 @@ Description: Values for all Candy Shop environments
 
 Description: Values for all Chocolate Factory environments
 
+### <a name="output_azure_short_regions"></a> [azure\_short\_regions](#output\_azure\_short\_regions)
+
+Description: FOR DEVELOPMENT
+
 ### <a name="output_cloud"></a> [cloud](#output\_cloud)
 
 Description: Cloud Provider
@@ -319,7 +356,7 @@ Description: Environment
 
 ### <a name="output_oci_short_regions"></a> [oci\_short\_regions](#output\_oci\_short\_regions)
 
-Description: n/a
+Description: FOR DEVELOPMENT
 
 ### <a name="output_project"></a> [project](#output\_project)
 
