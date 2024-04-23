@@ -50,6 +50,11 @@ variable "region" {
   }
 }
 
+variable "azure_regions" {
+  type        = any
+  description = "Short region map for Azure."
+}
+
 variable "oci_regions" {
   type        = any
   description = "Short region map for OCI."

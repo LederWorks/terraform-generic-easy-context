@@ -1,5 +1,6 @@
 locals {
   #Input Parameters
+  azure_regions = var.azure_regions
   oci_regions = var.oci_regions
 
   #Regions
@@ -24,14 +25,8 @@ locals {
 
   #Short Regions
   short_region = {
-    azure = local.is_valid_azure_region ? {
-      eastus2            = "eu2"
-      centralus          = "cus"
-      westus2            = "wu2"
-      northeurope        = "neu"
-      westeurope         = "weu"
-      germanywestcentral = "gwc"
-    }[local.region] : null
+    #Azure using a central set of short region codes, which is sourced statically
+    azure = local.is_valid_azure_region ? local.azure_regions[local.region] : null
 
     aws = local.is_valid_aws_region ? {
       "us-east-1"    = "ue1"

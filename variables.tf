@@ -86,11 +86,17 @@ variable "custom_tags" {
 # $$ |  $$ |$$$$$$$$\ \$$$$$$  |$$$$$$\  $$$$$$  |$$ | \$$ |\$$$$$$  |
 # \__|  \__|\________| \______/ \______| \______/ \__|  \__| \______/ 
 
+variable "azure_region_recommended_only" {
+  type        = bool
+  default     = true
+  description = "(Optional) Only return recommended regions for Azure."
+}
+
 variable "azure_regions" {
   type        = any
   default     = null
   description = <<EOT
-  You can use this variable to dynamically define the region short codes for all available regions in Azure.
+  You can use this variable to dynamically populate data for all available regions in Azure.
 
   You can use the https://github.com/Azure/terraform-azurerm-regions module with the Azure/azapi provider:
 
