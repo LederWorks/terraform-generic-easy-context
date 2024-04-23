@@ -5,9 +5,9 @@ module "azure_regions" {
   
   recommended_regions_only = false
 }
-output "azure_regions" {
-  value = module.azure_regions.regions
-}
+# output "azure_regions" {
+#   value = module.azure_regions.regions
+# }
 
 #Dynamic OCI Regions
 data "oci_identity_regions" "regions" {}

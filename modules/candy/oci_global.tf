@@ -9,7 +9,7 @@
 
 locals {
   oci_global = {
-    hub_vcn_id = local.is_valid_azure_region ? {
+    hub_vcn_id = local.is_valid_oci_region ? {
       us-ashburn-1   = "ocid1.vcn.oc1.iad.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaahub"
       us-phoenix-1   = "ocid1.vcn.oc1.phx.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaahub"
       us-sanjose-1   = "ocid1.vcn.oc1.sjc.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaahub"

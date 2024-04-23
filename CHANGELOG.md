@@ -10,6 +10,8 @@ ENHANCEMENTS:
 - Updated terraform task to v3
 - Updated checkout task to v4
 - Updated setup-terraform to v3
+- Updated terraform-docs to v1.1.0
+- Updated gittools to v1.1.1
 
 BUG FIXES:
 - Fixed tailing white spaces after some region names
