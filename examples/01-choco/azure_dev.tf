@@ -16,7 +16,14 @@ module "context_choco_azure_dev" {
   custom_tags = {
     HQ = "Brussels"
   }
+
+  #Regions
+  oci_regions = data.oci_identity_regions.regions.regions
 }
 output "azure_dev_context" {
   value = module.context_choco_azure_dev.context
+}
+
+output "oci_regions" {
+  value = module.context_choco_azure_dev.oci_regions
 }

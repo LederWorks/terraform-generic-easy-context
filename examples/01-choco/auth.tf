@@ -7,6 +7,14 @@ provider "azurerm" {
   }
 }
 
+provider "oci" {
+  tenancy_ocid = var.TENANCY_OCID
+  user_ocid    = var.USER_OCID
+  private_key  = var.PRIVATE_KEY
+  fingerprint  = var.FINGERPRINT
+  region       = "eu-frankfurt-1"
+}
+
 #Versions
 terraform {
   required_version = ">=1.3.6"
@@ -14,6 +22,10 @@ terraform {
     azurerm = {
       source  = "hashicorp/azurerm"
       version = "3.99.0"
+    }
+    oci = {
+      source  = "oracle/oci"
+      version = "5.38.0"
     }
   }
 }

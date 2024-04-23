@@ -76,3 +76,28 @@ variable "custom_tags" {
   default     = {}
   description = "Custom Resource tags"
 }
+
+# $$$$$$$\  $$$$$$$$\  $$$$$$\  $$$$$$\  $$$$$$\  $$\   $$\  $$$$$$\  
+# $$  __$$\ $$  _____|$$  __$$\ \_$$  _|$$  __$$\ $$$\  $$ |$$  __$$\ 
+# $$ |  $$ |$$ |      $$ /  \__|  $$ |  $$ /  $$ |$$$$\ $$ |$$ /  \__|
+# $$$$$$$  |$$$$$\    $$ |$$$$\   $$ |  $$ |  $$ |$$ $$\$$ |\$$$$$$\  
+# $$  __$$< $$  __|   $$ |\_$$ |  $$ |  $$ |  $$ |$$ \$$$$ | \____$$\ 
+# $$ |  $$ |$$ |      $$ |  $$ |  $$ |  $$ |  $$ |$$ |\$$$ |$$\   $$ |
+# $$ |  $$ |$$$$$$$$\ \$$$$$$  |$$$$$$\  $$$$$$  |$$ | \$$ |\$$$$$$  |
+# \__|  \__|\________| \______/ \______| \______/ \__|  \__| \______/ 
+
+variable "oci_regions" {
+  type = any
+  default = null
+  description = <<EOT
+  You can use this variable to dynamically define the region short codes for all available regions in OCI.
+
+  ```hcl
+  data "oci_identity_regions" "regions" {}
+
+  module "context" {
+    oci_regions = data.oci_identity_regions.regions.regions
+  }
+  ```
+  EOT
+}
