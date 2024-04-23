@@ -4,7 +4,7 @@ module "context_choco_gcp_tst" {
   #Common
   cloud       = "gcp"
   environment = "tst"
-  region      = "westeurope"
+  region      = "us-east1"
 
   #General
   department = "marketing"
