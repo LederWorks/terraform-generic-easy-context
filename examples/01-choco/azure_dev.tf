@@ -23,7 +23,3 @@ module "context_choco_azure_dev" {
 output "azure_dev_context" {
   value = module.context_choco_azure_dev.context
 }
-
-output "oci_regions" {
-  value = module.context_choco_azure_dev.oci_regions
-}
