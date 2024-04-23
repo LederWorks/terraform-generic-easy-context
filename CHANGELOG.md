@@ -15,6 +15,7 @@ ENHANCEMENTS:
 
 BUG FIXES:
 - Fixed tailing white spaces after some region names
+- Added all inputs to the context object
 
 ## v0.5.0
 FEATURES:
