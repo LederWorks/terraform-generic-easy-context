@@ -1,6 +1,6 @@
 locals {
   #Dynamic regions data from var.azure_regions input
-  azure_regions_dynamic = var.azure_regions != null ? { for region in var.azure_regions : region.name => region.key } : null
+  azure_regions_dynamic = var.azure_regions != null ? { for region in var.azure_regions : region.name => region } : null
 
   #Static regions map with Zone Aware (Recommended) regions
   azure_regions_static_zone_aware = {
