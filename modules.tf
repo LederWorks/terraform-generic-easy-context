@@ -9,6 +9,7 @@ module "choco" {
   cloud       = local.cloud
   environment = local.environment
   region      = local.region
+  oci_regions = local.oci_short_regions
 }
 
 #Cologne Candy Shop
@@ -18,6 +19,7 @@ module "candy" {
   cloud       = local.cloud
   environment = local.environment
   region      = local.region
+  oci_regions = local.oci_short_regions
 }
 
 #Istanbul Icecream Industries

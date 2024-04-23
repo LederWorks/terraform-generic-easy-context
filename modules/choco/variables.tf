@@ -49,3 +49,8 @@ variable "region" {
     EOT
   }
 }
+
+variable "oci_regions" {
+  type = any
+  description = "Short region map for OCI."
+}
