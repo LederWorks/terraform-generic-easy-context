@@ -1,11 +1,11 @@
-module "context_candy_oci_int" {
+module "context_candy_azure_prd" {
   source = "../.."
 
   #Common
   subsidiary  = "candy"
-  cloud       = "oci"
-  environment = "int"
-  region      = "northeurope"
+  cloud       = "azure"
+  environment = "prd"
+  region      = "westus2"
 
   #General
   department = "logistics"
@@ -18,7 +18,11 @@ module "context_candy_oci_int" {
   custom_tags = {
     HQ = "Cologne"
   }
+
+  #Regions
+  azure_regions = module.azure_regions.regions
+
 }
-output "context_candy_oci_int" {
-  value = module.context_candy_oci_int.context
+output "context_candy_azure_prd" {
+  value = module.context_candy_azure_prd.context
 }

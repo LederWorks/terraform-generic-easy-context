@@ -1,6 +1,22 @@
 # Change Log
 
-## v0.5.0 [current]
+## v0.6.0 [current]
+FEATURES:
+- Added OCI data
+- Added support for dynamic OCI region short names via the oci_regions input parameter
+
+ENHANCEMENTS:
+- Updated go task to v5, which supports sum caching
+- Updated terraform task to v3
+- Updated checkout task to v4
+- Updated setup-terraform to v3
+- Updated terraform-docs to v1.1.0
+- Updated gittools to v1.1.1
+
+BUG FIXES:
+- Fixed tailing white spaces after some region names
+
+## v0.5.0
 FEATURES:
 - Added GCP data
 
