@@ -33,6 +33,55 @@ locals {
   is_valid_oci_region    = contains(local.regions["oci"], local.region)
   is_valid_onprem_region = contains(local.regions["onprem"], local.region)
 
+  #Short Regions
+  short_region = {
+    azure = {
+      eastus2            = "eu2"
+      centralus          = "cus"
+      westus2            = "wu2"
+      northeurope        = "neu"
+      westeurope         = "weu"
+      germanywestcentral = "gwc"
+    }[local.region]
+
+    aws = {
+      "us-east-1"   = "ue1"
+      "us-west-1"   = "uw1"
+      "us-west-2"   = "uw2"
+      "eu-west-1"   = "ew1"
+      "eu-central-1" = "ec1"
+      "eu-north-1"  = "en1"
+    }[local.region]
+
+    gcp = {
+      "us-central1"   = "uc1"
+      "us-east1"      = "ue1"
+      "us-west1"      = "uw1"
+      "europe-west1"  = "ew1"
+      "europe-west2"  = "ew2"
+      "europe-west3"  = "ew3"
+    }[local.region]
+
+    oci = {
+      "us-ashburn-1"  = "ua1"
+      "us-phoenix-1"  = "up1"
+      "us-sanjose-1"  = "usj1"
+      "eu-frankfurt-1" = "ef1"
+      "eu-amsterdam-1" = "ea1"
+      "eu-london-1"    = "el1"
+    }[local.region]
+
+    onprem = {
+      "us-central" = "usc"
+      "us-east"    = "use"
+      "us-west"    = "usw"
+      "eu-central" = "euc"
+      "eu-west"    = "euw"
+      "eu-north"   = "eun"
+    }[local.region]
+
+  }[local.cloud]
+
   #Context
   context = merge(
     {
@@ -40,6 +89,7 @@ locals {
       environment   = local.environment,
       region        = local.region,
       cloud_regions = local.cloud_regions,
+      short_region  = local.short_region,
     },
     local.global,
     {
