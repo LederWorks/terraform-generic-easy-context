@@ -31,36 +31,6 @@ variable "environment" {
   description = "Environment - place in the SDLC lifecycle"
 }
 
-# variable "environment_azure" {
-#   type        = string
-#   description = "Azure Environment - place in the SDLC lifecycle"
-#   default     = null
-# }
-
-# variable "environment_aws" {
-#   type        = string
-#   description = "AWS Environment - place in the SDLC lifecycle"
-#   default     = null
-# }
-
-# variable "environment_gcp" {
-#   type        = string
-#   description = "GCP Environment - place in the SDLC lifecycle"
-#   default     = null
-# }
-
-# variable "environment_oci" {
-#   type        = string
-#   description = "OCI Environment - place in the SDLC lifecycle"
-#   default     = null
-# }
-
-# variable "environment_onprem" {
-#   type        = string
-#   description = "OnPrem Environment - place in the SDLC lifecycle"
-#   default     = null
-# }
-
 #Region
 variable "region" {
   type        = string
