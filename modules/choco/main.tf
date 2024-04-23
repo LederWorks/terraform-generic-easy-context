@@ -26,7 +26,7 @@ locals {
       short_region  = local.short_region,
       project       = local.project,
       department    = local.department,
-      tags          = local.tags
+      tags          = local.tags,
     },
     local.global,
     {

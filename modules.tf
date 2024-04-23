@@ -25,6 +25,9 @@ module "candy" {
   region        = local.region
   azure_regions = local.azure_short_regions
   oci_regions   = local.oci_short_regions
+  project       = local.project
+  department    = local.department
+  tags          = local.tags
 }
 
 #Istanbul Icecream Industries
