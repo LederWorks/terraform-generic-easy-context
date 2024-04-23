@@ -6,7 +6,7 @@ FEATURES:
 - Added support for dynamic OCI region short names via the oci_regions input parameter
 
 ENHANCEMENTS:
-- Updated go task to v5, which supports caching
+- Updated go task to v5, which supports sum caching
 - Updated terraform task to v3
 - Updated checkout task to v4
 - Updated setup-terraform to v3
