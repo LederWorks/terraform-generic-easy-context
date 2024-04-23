@@ -5,7 +5,7 @@ module "context_candy_oci_int" {
   subsidiary  = "candy"
   cloud       = "oci"
   environment = "int"
-  region      = "northeurope"
+  region      = "us-phoenix-1"
 
   #General
   department = "logistics"
